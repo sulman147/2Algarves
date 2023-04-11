@@ -50,11 +50,14 @@ const UserMenu: React.FC<UserMenuProps> = ({
             hidden
             md:block
             text-sm 
+            text-white
             font-semibold 
             py-3 
             px-4 
+            bg-red-500
             rounded-full 
             hover:bg-neutral-100 
+            hover:text-black 
             transition 
             cursor-pointer
           "
