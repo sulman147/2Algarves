@@ -122,6 +122,52 @@ const ListingCard: React.FC<ListingCardProps> = ({
             <div className="font-light">night</div>
           )}
         </div>
+        <div style={{display:'flex',justifyContent: 'space-between'}}>
+        <div 
+          // onClick={onRent}
+          className="
+            hidden
+            w-32
+            md:block
+            text-sm 
+            text-center
+            text-white
+            font-semibold 
+            py-3 
+            px-4 
+            bg-red-500
+            rounded-md 
+            hover:bg-neutral-400 
+            hover:text-black 
+            transition 
+            cursor-pointer
+          "
+        >
+          Videos
+        </div>
+        <div 
+          // onClick={onRent}
+          className="
+            hidden
+            w-32
+            md:block
+            text-sm
+            text-center 
+            text-white
+            font-semibold 
+            py-3 
+            px-4 
+            bg-red-500
+            rounded-md 
+            hover:bg-neutral-400 
+            hover:text-black 
+            transition 
+            cursor-pointer
+          "
+        >
+          Map
+        </div>
+        </div>
         {onAction && actionLabel && (
           <Button
             disabled={disabled}
