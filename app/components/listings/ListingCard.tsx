@@ -75,99 +75,103 @@ const ListingCard: React.FC<ListingCardProps> = ({
       onClick={() => router.push(`/listings/${data.id}`)} 
       className="col-span-1 cursor-pointer group"
     >
-      <div className="flex flex-col gap-2 w-full">
-        <div 
-          className="
-            aspect-square 
-            w-full 
-            relative 
-            overflow-hidden 
-            rounded-xl
-          "
-        >
-          <Image
-            fill
+        <div className="flex flex-col gap-2 w-full">
+          <div 
             className="
-              object-cover 
-              h-full 
+              aspect-square 
               w-full 
-              group-hover:scale-110 
-              transition
+              relative 
+              overflow-hidden 
+              rounded-xl
             "
-            src={data.imageSrc}
-            alt="Listing"
-          />
-          <div className="
-            absolute
-            top-3
-            right-3
-          ">
-            <HeartButton 
-              listingId={data.id} 
-              currentUser={currentUser}
+          >
+            <Image
+              fill
+              className="
+                object-cover 
+                h-full 
+                w-full 
+                group-hover:scale-110 
+                transition
+              "
+              src={data.imageSrc}
+              alt="Listing"
             />
+            <div className="
+              absolute
+              top-3
+              right-3
+            ">
+              <HeartButton 
+                listingId={data.id} 
+                currentUser={currentUser}
+              />
+            </div>
           </div>
-        </div>
-        <div className="font-semibold text-lg">
-          {location?.region}, {location?.label}
-        </div>
-        <div className="font-light text-neutral-500">
-          {reservationDate || data.category}
-        </div>
-        <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold">
-            $ {price}
+          <div className="flex flex-row place-content-between gap-2 w-full " >
+            <div>
+              <div className="font-semibold text-lg">
+                {location?.region}, {location?.label}
+              </div>
+              <div className="font-light text-neutral-500">
+                {reservationDate || data.category}
+              </div>
+              <div className="flex flex-row items-center gap-1">
+                <div className="font-semibold">
+                  $ {price}
+                </div>
+                {!reservation && (
+                <div className="font-light">night</div>
+                )}
+              </div>
+            </div>
+              <div>
+                <div className="flex flex-col gap-2 w-full">
+                  <div 
+                    //  onClick={onRent}
+                    className="
+                      w-32
+                      md:block
+                      text-sm 
+                      text-center
+                    text-white
+                      font-semibold 
+                      py-3 
+                      px-4 
+                    bg-red-500
+                      rounded-md 
+                    hover:bg-neutral-400 
+                    hover:text-black 
+                      transition 
+                      cursor-pointer
+                      "
+                  >
+                  Videos
+                  </div>
+                  <div 
+                  // onClick={onRent}
+                    className="
+                      w-32
+                      md:block
+                      text-sm
+                      text-center 
+                    text-white
+                      font-semibold 
+                      py-3 
+                      px-4 
+                    bg-red-500
+                      rounded-md 
+                    hover:bg-neutral-400 
+                    hover:text-black 
+                      transition 
+                      cursor-pointer
+                      "
+                    >
+                    Map
+                  </div>
+                </div>
+            </div>
           </div>
-          {!reservation && (
-            <div className="font-light">night</div>
-          )}
-        </div>
-        <div style={{display:'flex',justifyContent: 'space-between'}}>
-        <div 
-          // onClick={onRent}
-          className="
-            hidden
-            w-32
-            md:block
-            text-sm 
-            text-center
-            text-white
-            font-semibold 
-            py-3 
-            px-4 
-            bg-red-500
-            rounded-md 
-            hover:bg-neutral-400 
-            hover:text-black 
-            transition 
-            cursor-pointer
-          "
-        >
-          Videos
-        </div>
-        <div 
-          // onClick={onRent}
-          className="
-            hidden
-            w-32
-            md:block
-            text-sm
-            text-center 
-            text-white
-            font-semibold 
-            py-3 
-            px-4 
-            bg-red-500
-            rounded-md 
-            hover:bg-neutral-400 
-            hover:text-black 
-            transition 
-            cursor-pointer
-          "
-        >
-          Map
-        </div>
-        </div>
         {onAction && actionLabel && (
           <Button
             disabled={disabled}
@@ -176,7 +180,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
             onClick={handleCancel}
           />
         )}
-      </div>
+        </div>
     </div>
    );
 }
