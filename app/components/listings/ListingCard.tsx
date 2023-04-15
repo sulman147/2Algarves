@@ -114,7 +114,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           </div>
           <div className="flex flex-row place-content-between gap-2 w-full " >
             <div>
-              <img className="relative mx-auto h-20 w-20 -mt-16 z-100 rounded-full sm:mx-0 sm:shrink-0" src="/images/Algarve.jpg" alt="brand" />
+              <img className="relative mx-auto h-20 w-20 lg:ml-3 md:ml-6 sm:ml-4 -mt-16 z-100 rounded-full sm:mx-0 sm:shrink-0" src="/images/Algarve.jpg" alt="brand" />
               <div className="font-semibold text-lg">
                 {location?.region}, {location?.label}
               </div>
