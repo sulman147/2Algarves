@@ -135,7 +135,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                 <div 
             className="
             p-2 
-            bg-pink-700 
+            bg-button 
             rounded-full 
             text-white
             hover:bg-orange-700 
@@ -147,7 +147,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           <div 
             className="
               p-2 
-              bg-pink-700 
+              bg-button 
               rounded-full 
               text-white
               hover:bg-orange-700 
