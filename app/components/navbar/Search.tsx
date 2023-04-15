@@ -112,7 +112,7 @@ const Search = () => {
           <div 
             className="
             p-2 
-            bg-button 
+            bg-pink-700 
             rounded-full 
             text-white
             hover:bg-orange-700 
