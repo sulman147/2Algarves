@@ -125,8 +125,9 @@ const SearchModal = () => {
       />
       <CountrySelect 
         value={location} 
-        onChange={(value) => 
-          setLocation(value as CountrySelectValue)} 
+        onChange={(value) =>{ 
+          console.log(value)
+          setLocation(value as CountrySelectValue)}} 
       />
       <hr />
       <Map center={location?.latlng} />

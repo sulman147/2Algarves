@@ -21,6 +21,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   value
 }) => {
   const handleUpload = useCallback((result: any) => {
+    console.log("this is secure url",result.info.secure_url)
     onChange(result.info.secure_url);
   }, [onChange]);
 
@@ -29,7 +30,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
       onUpload={handleUpload} 
       uploadPreset={uploadPreset}
       options={{
-        maxFiles: 1
+        maxFiles: 10
       }}
     >
       {({ open }) => {

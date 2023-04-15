@@ -90,13 +90,14 @@ const ListingCard: React.FC<ListingCardProps> = ({
               className="
                 object-cover 
                 h-full 
-                w-full 
+                w-full
                 group-hover:scale-110 
                 transition
               "
               src={data.imageSrc}
               alt="Listing"
             />
+            
             <div className="
               absolute
               top-3
@@ -110,6 +111,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           </div>
           <div className="flex flex-row place-content-between gap-2 w-full " >
             <div>
+              <img className="relative mx-auto h-20 w-20 -mt-16 z-100 rounded-full sm:mx-0 sm:shrink-0" src="/images/Algarve.jpg" alt="brand" />
               <div className="font-semibold text-lg">
                 {location?.region}, {location?.label}
               </div>
@@ -126,21 +128,21 @@ const ListingCard: React.FC<ListingCardProps> = ({
               </div>
             </div>
               <div>
-                <div className="flex flex-col gap-2 w-full">
+                <div className="flex flex-col mt-3 gap-2 w-full">
                   <div 
                     //  onClick={onRent}
                     className="
-                      w-32
+                      w-22
                       md:block
                       text-sm 
                       text-center
                     text-white
                       font-semibold 
                       py-3 
-                      px-4 
-                    bg-red-500
+                      px-3 
+                    bg-purple-500
                       rounded-md 
-                    hover:bg-neutral-400 
+                    hover:bg-sky-500 
                     hover:text-black 
                       transition 
                       cursor-pointer
@@ -151,23 +153,23 @@ const ListingCard: React.FC<ListingCardProps> = ({
                   <div 
                   // onClick={onRent}
                     className="
-                      w-32
+                      w-22
                       md:block
                       text-sm
                       text-center 
                     text-white
                       font-semibold 
                       py-3 
-                      px-4 
-                    bg-red-500
+                      px-3 
+                    bg-purple-500
                       rounded-md 
-                    hover:bg-neutral-400 
+                    hover:bg-sky-500 
                     hover:text-black 
                       transition 
                       cursor-pointer
                       "
                     >
-                    Map
+                    Maps
                   </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             font-semibold 
             py-3 
             px-4 
-            bg-red-500
+            bg-purple-500
             rounded-full 
             hover:bg-neutral-100 
             hover:text-black 
@@ -108,19 +108,19 @@ const UserMenu: React.FC<UserMenuProps> = ({
               <>
                 <MenuItem 
                   label="My trips" 
-                  onClick={() => router.push('/')}
+                  onClick={() => router.push('/trips')}
                 />
                 <MenuItem 
                   label="My favorites" 
-                  onClick={() => router.push('/')}
+                  onClick={() => router.push('/favorites')}
                 />
                 <MenuItem 
                   label="My reservations" 
-                  onClick={() => router.push('/')}
+                  onClick={() => router.push('/reservations')}
                 />
                 <MenuItem 
                   label="My properties" 
-                  onClick={() => router.push('/')}
+                  onClick={() => router.push('/properties')}
                 />
                 {/* <MenuItem 
                   label="Add Listing" 
