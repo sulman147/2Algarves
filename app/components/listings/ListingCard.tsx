@@ -15,6 +15,9 @@ import {
 import HeartButton from "../HeartButton";
 import Button from "../Button";
 import ClientOnly from "../ClientOnly";
+import { BiSearch } from "react-icons/bi";
+import { AiOutlinePlayCircle} from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci";
 
 interface ListingCardProps {
   data: SafeListing;
@@ -128,8 +131,32 @@ const ListingCard: React.FC<ListingCardProps> = ({
               </div>
             </div>
               <div>
-                <div className="flex flex-col mt-3 gap-2 w-full">
-                  <div 
+                <div className="flex flex-row mt-3 gap-2 w-full">
+                <div 
+            className="
+            p-2 
+            bg-pink-700 
+            rounded-full 
+            text-white
+            hover:bg-orange-700 
+            hover:text-white 
+            "
+          >
+            <CiLocationOn size={24} />
+          </div>
+          <div 
+            className="
+              p-2 
+              bg-pink-700 
+              rounded-full 
+              text-white
+              hover:bg-orange-700 
+              hover:text-white 
+            "
+          >
+            <AiOutlinePlayCircle size={24} />
+          </div>
+                  {/* <div 
                     //  onClick={onRent}
                     className="
                       w-22
@@ -147,8 +174,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                       transition 
                       cursor-pointer
                       "
-                  >
-                  Videos
+                  > Videos
                   </div>
                   <div 
                   // onClick={onRent}
@@ -170,7 +196,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                       "
                     >
                     Maps
-                  </div>
+                  </div> */}
                 </div>
             </div>
           </div>
