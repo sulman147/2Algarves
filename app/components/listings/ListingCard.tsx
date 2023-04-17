@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
 import { format } from 'date-fns';
-
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import useCountries from "@/app/hooks/useCountries";
 import { 
   SafeListing, 
@@ -17,7 +18,7 @@ import Button from "../Button";
 import ClientOnly from "../ClientOnly";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlinePlayCircle} from "react-icons/ai";
-import { CiLocationOn } from "react-icons/ci";
+import { CiLocationOn,CiCircleMore } from "react-icons/ci";
 
 interface ListingCardProps {
   data: SafeListing;
@@ -69,13 +70,14 @@ const ListingCard: React.FC<ListingCardProps> = ({
   
     const start = new Date(reservation.startDate);
     const end = new Date(reservation.endDate);
+    
 
     return `${format(start, 'PP')} - ${format(end, 'PP')}`;
   }, [reservation]);
 
   return (
     <div 
-      onClick={() => router.push(`/listings/${data.id}`)} 
+      // 
       className="col-span-1 cursor-pointer group"
     >
         <div className="flex flex-col gap-2 w-full">
@@ -88,7 +90,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
               rounded-xl
             "
           >
-            <Image
+            {/* <Image
               fill
               className="
                 object-cover 
@@ -99,12 +101,26 @@ const ListingCard: React.FC<ListingCardProps> = ({
               "
               src={data.imageSrc}
               alt="Listing"
-            />
+            /> */}
+             <Carousel showThumbs={false} >
+                <div >
+                    <img src="/images/1.jpg" />
+                </div>
+                <div >
+                    <img  src="/images/2.jpg" />
+                    
+                </div>
+                <div >
+                    <img  src="/images/5.jpg" />
+                    
+                </div>
+            </Carousel>
+           
             
             <div className="
               absolute
-              top-3
-              right-3
+              top-4
+              right-7
             ">
               <HeartButton 
                 listingId={data.id} 
@@ -135,7 +151,20 @@ const ListingCard: React.FC<ListingCardProps> = ({
                 <div 
             className="
             p-2 
-            bg-pink-700 
+            bg-pink-750 
+            rounded-full 
+            text-white
+            hover:bg-orange-700 
+            hover:text-white 
+            "
+            onClick={() => router.push(`/listings/${data.id}`)}
+          >
+            <CiCircleMore size={24} />
+          </div>
+            <div 
+            className="
+            p-2 
+            bg-pink-750 
             rounded-full 
             text-white
             hover:bg-orange-700 
@@ -147,7 +176,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           <div 
             className="
               p-2 
-              bg-pink-700 
+              bg-pink-750 
               rounded-full 
               text-white
               hover:bg-orange-700 
@@ -209,6 +238,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           />
         )}
         </div>
+       
     </div>
    );
 }
