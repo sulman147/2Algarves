@@ -118,7 +118,7 @@ const Categories = () => {
           flex 
           flex-row 
           items-center 
-          justify-between
+          justify-center
           overflow-x-auto
         "
       >
