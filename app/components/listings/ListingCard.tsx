@@ -102,15 +102,27 @@ const ListingCard: React.FC<ListingCardProps> = ({
               alt="Listing"
             /> */}
              <Carousel showThumbs={false} >
-                <div >
+                <div onClick={() => router.push(`/listings/${data.id}`)}>
                     <img src="/images/1.jpg" />
                 </div>
-                <div >
+                <div onClick={() => router.push(`/listings/${data.id}`)}>
                     <img  src="/images/2.jpg" />
                     
                 </div>
-                <div >
+                <div onClick={() => router.push(`/listings/${data.id}`)}>
                     <img  src="/images/5.jpg" />
+                    
+                </div>
+                <div onClick={() => router.push(`/listings/${data.id}`)}>
+                    <img  src="/images/3.jpg" />
+                    
+                </div>
+                <div onClick={() => router.push(`/listings/${data.id}`)}>
+                    <img  src="/images/4.jpg" />
+                    
+                </div>
+                <div onClick={() => router.push(`/listings/${data.id}`)}>
+                    <img  src="/images/6.jpg" />
                     
                 </div>
             </Carousel>
