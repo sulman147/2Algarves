@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import useCountries from "@/app/hooks/useCountries";
 import { SafeUser } from "@/app/types";
-
+import { Player } from 'video-react';
 import Heading from "../Heading";
 import HeartButton from "../HeartButton";
 
@@ -39,6 +39,26 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           overflow-hidden 
           rounded-xl
           relative
+          video-responsive
+        "
+      >
+         <iframe
+      width="1053"
+      height="480"
+      src={`https://www.youtube.com/embed/d1DhBZVL5Pg`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    />
+        
+      </div>
+      {/* <div className="
+          w-full
+          h-[60vh]
+          overflow-hidden 
+          rounded-xl
+          relative
         "
       >
         <Image
@@ -59,7 +79,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
             currentUser={currentUser}
           />
         </div>
-      </div>
+      </div> */}
     </>
    );
 }

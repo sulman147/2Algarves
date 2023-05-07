@@ -15,6 +15,10 @@ import { categories } from "@/app/components/navbar/Categories";
 import ListingHead from "@/app/components/listings/ListingHead";
 import ListingInfo from "@/app/components/listings/ListingInfo";
 import ListingReservation from "@/app/components/listings/ListingReservation";
+import ContactInfo from "@/app/components/listings/ContactInfo";
+import Ammenities from "@/app/components/listings/Ammenities";
+import Gallery from "@/app/components/listings/Gallery";
+
 
 const initialDateRange = {
   startDate: new Date(),
@@ -117,7 +121,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
           max-w-screen-lg 
           mx-auto
         "
-      >
+      > 
         <div className="flex flex-col gap-6">
           <ListingHead
             title={listing.title}
@@ -161,6 +165,27 @@ const ListingClient: React.FC<ListingClientProps> = ({
                 disabled={isLoading}
                 disabledDates={disabledDates}
               />
+            </div>
+          </div>
+          <div 
+            className="
+              grid 
+              grid-cols-1 
+              md:grid-cols-7 
+              md:gap-10 
+              mt-6
+            "
+          >
+            <Ammenities/>
+            <div 
+              className="
+                order-first 
+                mb-10 
+                md:order-last 
+                md:col-span-3
+              "
+            >
+              <Gallery/>
             </div>
           </div>
         </div>
