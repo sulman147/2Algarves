@@ -57,6 +57,7 @@ const Gallery = ({}) => {
         targetRowHeight={150}
         onClick={({ index }) => setIndex(index)}
       />
+      <hr />
       <button onClick={() => setIndex(1)}>View More ... </button>
       <Lightbox
         slides={photos}
