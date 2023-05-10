@@ -1,14 +1,6 @@
 'use client';
 
-import { Range } from "react-date-range";
-
-
-interface ContactInfoProps {
-}
-
-const ContactInfo: React.FC<
-ContactInfoProps
-> = ({
+const ContactInfo = ({
  
 }) => {
   return ( 

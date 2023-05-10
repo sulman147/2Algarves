@@ -7,6 +7,7 @@ import { SafeUser } from "@/app/types";
 import { Player } from 'video-react';
 import Heading from "../Heading";
 import HeartButton from "../HeartButton";
+import Rating from '@mui/material/Rating';
 
 interface ListingHeadProps {
   title: string;
@@ -31,8 +32,12 @@ const ListingHead: React.FC<ListingHeadProps> = ({
     <>
       <Heading
         title={title}
-        subtitle={`${location?.region}, ${location?.label}`}
       />
+      <div className="flex flex-row">
+        <Rating name="read-only" value={2} readOnly />
+        <div>&ensp; 708 Reviews &ensp; |</div>
+        <div>&ensp;{`${location?.region}, ${location?.label}`}</div>
+      </div>
       <div className="
           w-full
           h-[60vh]

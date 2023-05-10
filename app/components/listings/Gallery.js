@@ -24,6 +24,14 @@ const photos = [
   { src: "/images/8.jpg", width: 1600, height: 900 },
   { src: "/images/9.jpg", width: 1600, height: 900 },
 ];
+const photos2 = [
+  { src: "/images/1.jpg", width: 800, height: 600 },
+  { src: "/images/2.jpg", width: 1600, height: 900 },
+  { src: "/images/3.jpg", width: 800, height: 600 },
+  { src: "/images/4.jpg", width: 1600, height: 900 },
+  { src: "/images/5.jpg", width: 800, height: 600 },
+  { src: "/images/6.jpg", width: 1600, height: 900 },
+];
 
 const Gallery = ({}) => {
   const [index, setIndex] = useState(-1);
@@ -44,11 +52,12 @@ const Gallery = ({}) => {
 
       <hr />
       <PhotoAlbum
-        layout="masonry"
-        photos={photos}
+        layout="columns"
+        photos={photos2}
         targetRowHeight={150}
         onClick={({ index }) => setIndex(index)}
       />
+      <button onClick={() => setIndex(1)}>View More ... </button>
       <Lightbox
         slides={photos}
         open={index >= 0}
