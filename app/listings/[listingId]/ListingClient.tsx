@@ -18,7 +18,7 @@ import ListingReservation from "@/app/components/listings/ListingReservation";
 import ContactInfo from "@/app/components/listings/ContactInfo";
 import Ammenities from "@/app/components/listings/Ammenities";
 import Gallery from "@/app/components/listings/Gallery";
-import LocationMap from "@/app/components/listings/LocationMap";
+import LocationCard from "@/app/components/listings/LocationCard";
 
 const initialDateRange = {
   startDate: new Date(),
@@ -118,11 +118,11 @@ const ListingClient: React.FC<ListingClientProps> = ({
     <Container>
       <div 
         className="
-          max-w-screen-lg 
+          max-w-screen-xl 
           mx-auto
         "
       > 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col ">
           <ListingHead
             title={listing.title}
             imageSrc={listing.imageSrc}
@@ -136,7 +136,6 @@ const ListingClient: React.FC<ListingClientProps> = ({
               grid-cols-1 
               md:grid-cols-7 
               md:gap-10 
-              mt-6
             "
           >
             <ListingInfo
@@ -152,45 +151,20 @@ const ListingClient: React.FC<ListingClientProps> = ({
               className="
                 order-first 
                 mb-10 
+                rounded-xl
                 md:order-last 
                 md:col-span-3
               "
             >
+              <LocationCard locationValue={listing.locationValue}/>
               <ContactInfo/>
-              {/* <ListingReservation
-                price={listing.price}
-                totalPrice={totalPrice}
-                onChangeDate={(value) => setDateRange(value)}
-                dateRange={dateRange}
-                onSubmit={onCreateReservation}
-                disabled={isLoading}
-                disabledDates={disabledDates}
-              /> */}
-            </div>
-          </div>
-          <div 
-            className="
-              grid 
-              grid-cols-1 
-              md:grid-cols-7 
-              md:gap-10 
-              mt-6
-            "
-          >
-            <Ammenities/>
-            <div 
-              className="
-                order-first 
-                mb-10 
-                md:order-last 
-                md:col-span-3
-              "
-            >
               <Gallery/>
             </div>
+            
+           
           </div>
+          
         </div>
-        <LocationMap locationValue={listing.locationValue}/>
       </div>
     </Container>
    );

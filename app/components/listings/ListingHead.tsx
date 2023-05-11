@@ -31,16 +31,16 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   return ( 
     <>
       <Heading
-        title={title}
+        title="️Nusa Penida by Private Boat - Snorkeling 4 spots"
       />
       <div className="flex flex-row">
-        <Rating name="read-only" value={2} readOnly />
+        <Rating name="read-only" value={5} readOnly />
         <div>&ensp; 708 Reviews &ensp; |</div>
-        <div>&ensp;{`${location?.region}, ${location?.label}`}</div>
+        <div>&ensp;{`${location?.label}, ${location?.region}`}</div>
       </div>
       <div className="
           w-full
-          h-[60vh]
+          h-[20vh]
           overflow-hidden 
           rounded-xl
           relative

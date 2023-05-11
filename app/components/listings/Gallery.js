@@ -12,6 +12,8 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import { BiCategoryAlt } from "react-icons/bi";
+import { GrGallery } from "react-icons/gr";
 
 const photos = [
   { src: "/images/1.jpg", width: 800, height: 600 },
@@ -36,27 +38,30 @@ const photos2 = [
 const Gallery = ({}) => {
   const [index, setIndex] = useState(-1);
   return (
-    <div className="col-span-4 flex flex-col gap-4 p-1.5 rounded-lg border-2 border-solid">
-      <div
-        className="
-          flex 
-          items-center 
-          justify-around
-          font-semibold
-          text-lg
-          mt-3
-        "
-      >
-        Gallery
+    <div className="flex flex-col bg-white rounded-xl mt-3">
+      <div className="flex flex-row items-center my-2 ml-6 gap-4 ">
+        <GrGallery size={20} />
+        <div
+          className="
+        flex
+        font-semibold
+        text-xl
+        items-center
+      "
+        >
+          Gallery
+        </div>
       </div>
 
       <hr />
-      <PhotoAlbum
-        layout="columns"
-        photos={photos2}
-        targetRowHeight={150}
-        onClick={({ index }) => setIndex(index)}
-      />
+      <div className="p-2">
+        <PhotoAlbum
+          layout="columns"
+          photos={photos2}
+          targetRowHeight={150}
+          onClick={({ index }) => setIndex(index)}
+        />
+      </div>
       <hr />
       <button onClick={() => setIndex(1)}>View More ... </button>
       <Lightbox

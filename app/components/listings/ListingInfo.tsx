@@ -9,6 +9,9 @@ import { SafeUser } from "@/app/types";
 import Avatar from "../Avatar";
 import ListingCategory from "./ListingCategory";
 import { useState } from "react";
+import { BiCategoryAlt } from "react-icons/bi";
+import { AiOutlineMenu } from "react-icons/ai";
+import Ammenities from "./Ammenities";
 
 const ReadMore = ({ children }: any) => {
   const text = children;
@@ -18,7 +21,7 @@ const ReadMore = ({ children }: any) => {
   };
   return (
     <p className="text">
-      {isReadMore ? text.slice(0, 150) : text}
+      {isReadMore ? text.slice(0, 350) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...read more" : " show less"}
       </span>
@@ -54,11 +57,11 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
   locationValue,
 }) => {
   const { getByValue } = useCountries();
-
+  
+  const location = getByValue(locationValue);
   const coordinates = getByValue(locationValue)?.latlng
-
   return ( 
-    <div className="col-span-4 flex flex-col gap-8">
+    <div className="col-span-4 flex flex-col">
       <div className="flex flex-col gap-2">
         <div 
           className="
@@ -93,27 +96,30 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
           </div>
         </div>
       </div>
-      <hr />
-      {/* {category && (
+     
+      
+      {category && (
         <ListingCategory
           icon={category.icon} 
           label={category?.label}
           description={category?.description} 
         />
       )}
-      <hr /> */}
-      <div
-        className="
-        flex 
-        mt-3
+      <hr className="mt-3"/>
+      <div className="flex flex-col bg-white rounded-xl">
+      <div className="flex flex-row items-center my-2 ml-6 gap-4 ">
+      <AiOutlineMenu size={20}/>
+      <div  className="
+        flex
         font-semibold
-        text-2xl
-      "
-      >
-        About this place
+        text-xl
+        items-center
+      ">About this place</div>
+        
       </div>
+      
       <div className="
-      text-lg font-light text-neutral-500">
+      text-lg font-light text-neutral-500 p-3">
         <ReadMore>
         This is without doubt THE BEST LOCATION you could ever ask for when visiting Sydney.
         2 minute walk to everything that is wonderful and local in the inner-city village of Surry Hills, and a short walk further to Sydney CBD, Hyde Park or Centennial Park. Across the road from the iconic Sydney Cricket Ground and other sporting venues, 15 minutes to Sydney beautiful eastern suburbs beaches including the world famous Bondi Beach.
@@ -125,6 +131,9 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         
         </ReadMore>
       </div>
+      </div>
+      <Map center={coordinates} />
+      <Ammenities/>
       
     </div>
    );
