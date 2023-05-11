@@ -29,7 +29,8 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   const location = getByValue(locationValue);
 
   return ( 
-    <>
+    <><div className="flex flex-row justify-between align-middle">
+      <div>
       <Heading
         title="️Nusa Penida by Private Boat - Snorkeling 4 spots"
       />
@@ -38,6 +39,12 @@ const ListingHead: React.FC<ListingHeadProps> = ({
         <div>&ensp; 708 Reviews &ensp; |</div>
         <div>&ensp;{`${location?.label}, ${location?.region}`}</div>
       </div>
+      </div>
+      <HeartButton 
+            listingId={id}
+            currentUser={currentUser}
+          />
+        </div>
       <div className="
           w-full
           mt-3

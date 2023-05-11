@@ -34,32 +34,37 @@ const Ammenities = ({}) => {
                 hover:bg-orange-700 
                 p-2"
               >
-                <RiDoorLockBoxLine size={25} className="text-neutral-200" />
-              </div>
-              &ensp;<div className="text-lg ">Lock on bathroom door</div>
-            </div>
-            <div className="flex items-center text-lg flex-row pb-2">
-              <div
-                className=" bg-pink-750
-                    rounded-full 
-                hover:bg-orange-700 
-                p-2"
-              >
-                <AiOutlineWifi size={25} className="text-neutral-200" />
-              </div>
-              &ensp;<div className="text-lg ">Wifi</div>
-            </div>
-            <div className="flex items-center text-lg flex-row pb-2">
-              <div
-                className=" bg-pink-750
-                    rounded-full 
-                hover:bg-orange-700 
-                p-2"
-              >
-                <CiMonitor size={25} className="text-neutral-200" />
+                <RiDoorLockBoxLine size={18} className="text-neutral-200" />
               </div>
               &ensp;
-              <div className="text-lg ">40`` HDTV with Netflix, Disney+</div>
+              <div className="text-base font-normal text-black">
+                Lock on bathroom door
+              </div>
+            </div>
+            <div className="flex items-center text-lg flex-row pb-2">
+              <div
+                className=" bg-pink-750
+                    rounded-full 
+                hover:bg-orange-700 
+                p-2"
+              >
+                <AiOutlineWifi size={18} className="text-neutral-200" />
+              </div>
+              &ensp;<div className="text-base font-normal text-black">Wifi</div>
+            </div>
+            <div className="flex items-center text-lg flex-row pb-2">
+              <div
+                className=" bg-pink-750
+                    rounded-full 
+                hover:bg-orange-700 
+                p-2"
+              >
+                <CiMonitor size={18} className="text-neutral-200" />
+              </div>
+              &ensp;
+              <div className="text-base font-normal text-black">
+                40`` HDTV with Netflix, Disney+
+              </div>
             </div>
           </div>
 
@@ -71,9 +76,12 @@ const Ammenities = ({}) => {
                 hover:bg-orange-700 
                 p-2"
               >
-                <TbWashDry1 size={25} className="text-neutral-200" />
+                <TbWashDry1 size={18} className="text-neutral-200" />
               </div>
-              &ensp;<div className="text-lg ">Free dryer - In unit</div>
+              &ensp;
+              <div className="text-base font-normal text-black">
+                Free dryer - In unit
+              </div>
             </div>
             <div className="flex items-center text-lg flex-row pb-2">
               <div
@@ -82,9 +90,12 @@ const Ammenities = ({}) => {
                 hover:bg-orange-700 
                 p-2"
               >
-                <GiModernCity size={25} className="text-neutral-200" />
+                <GiModernCity size={18} className="text-neutral-200" />
               </div>
-              &ensp;<div className="text-lg">City skyline View</div>
+              &ensp;
+              <div className="text-base font-normal text-black">
+                City skyline View
+              </div>
             </div>
             <div className="flex items-center text-lg flex-row  pb-2">
               <div
@@ -93,9 +104,12 @@ const Ammenities = ({}) => {
                 hover:bg-orange-700 
                 p-2"
               >
-                <TbWashDry2 size={25} className="text-neutral-200" />
+                <TbWashDry2 size={18} className="text-neutral-200" />
               </div>
-              &ensp;<div className="text-lg ">Free Washer - In unit</div>
+              &ensp;
+              <div className="text-base font-normal text-black">
+                Free Washer - In unit
+              </div>
             </div>
           </div>
         </div>

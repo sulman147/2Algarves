@@ -118,7 +118,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
     <Container>
       <div 
         className="
-          max-w-screen-xl 
+          max-w-screen-lg 
           mx-auto
         "
       > 

@@ -23,7 +23,7 @@ const ReadMore = ({ children }: any) => {
     <p className="text">
       {isReadMore ? text.slice(0, 350) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
-        {isReadMore ? "...read more" : " show less"}
+        {isReadMore ? <span className="font-bold text-pink-750 ">&ensp;...read more</span> : <span className="font-bold text-pink-750 ">&ensp;show less</span>}
       </span>
     </p>
   );
@@ -119,7 +119,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
       </div>
       
       <div className="
-      text-lg font-light text-neutral-500 p-3">
+      text-base font-normal text-black p-3">
         <ReadMore>
         This is without doubt THE BEST LOCATION you could ever ask for when visiting Sydney.
         2 minute walk to everything that is wonderful and local in the inner-city village of Surry Hills, and a short walk further to Sydney CBD, Hyde Park or Centennial Park. Across the road from the iconic Sydney Cricket Ground and other sporting venues, 15 minutes to Sydney beautiful eastern suburbs beaches including the world famous Bondi Beach.
