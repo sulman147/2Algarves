@@ -28,11 +28,11 @@ const photos = [
 ];
 const photos2 = [
   { src: "/images/1.jpg", width: 800, height: 600 },
-  { src: "/images/2.jpg", width: 1600, height: 900 },
+  { src: "/images/2.jpg", width: 800, height: 600 },
   { src: "/images/3.jpg", width: 800, height: 600 },
-  { src: "/images/4.jpg", width: 1600, height: 900 },
+  { src: "/images/4.jpg", width: 800, height: 600 },
   { src: "/images/5.jpg", width: 800, height: 600 },
-  { src: "/images/6.jpg", width: 1600, height: 900 },
+  { src: "/images/6.jpg", width: 800, height: 600 },
 ];
 
 const Gallery = ({}) => {
@@ -63,7 +63,30 @@ const Gallery = ({}) => {
         />
       </div>
       <hr />
-      <button onClick={() => setIndex(1)}>View More ... </button>
+      <div className="flex justify-center mb-2 mt-2">
+        <div
+          onClick={() => setIndex(1)}
+          className="
+            hidden
+            w-50
+            md:block
+            text-sm 
+            text-white
+            font-semibold 
+            py-2 
+            px-4
+            bg-pink-750
+            rounded-lg 
+            hover:bg-orange-700 
+            hover:text-white 
+            transition
+            cursor-pointer
+          "
+        >
+          View More
+        </div>
+      </div>
+      {/* <button onClick={() => setIndex(1)}> </button> */}
       <Lightbox
         slides={photos}
         open={index >= 0}
