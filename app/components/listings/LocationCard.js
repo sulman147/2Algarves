@@ -7,7 +7,7 @@ export default function LocationCard({ locationValue }) {
   const { getByValue } = useCountries();
   const location = getByValue(locationValue);
   return (
-    <div className="flex flex-col bg-white rounded-xl">
+    <div className="flex flex-col bg-white rounded-xl mt-3">
       <div className="flex flex-row items-center my-2 ml-6 gap-4 ">
         <BiCategoryAlt size={20} />
         <div

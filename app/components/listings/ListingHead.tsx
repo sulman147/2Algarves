@@ -40,6 +40,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
       </div>
       <div className="
           w-full
+          mt-3
           h-[20vh]
           overflow-hidden 
           rounded-xl
