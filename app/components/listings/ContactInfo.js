@@ -27,18 +27,10 @@ const ContactInfo = ({ price }) => {
           </div>
           <div
             className="
-            hidden
-            md:block
             text-sm 
-            text-white
-            font-semibold 
-            py-2 
-            px-2 
-            bg-pink-750
-            rounded-full 
-            hover:bg-orange-700 
-            hover:text-white 
-            transition 
+            text-green-600
+            font-bold
+            mt-2
             cursor-pointer
           "
           >
