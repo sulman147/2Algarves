@@ -47,7 +47,7 @@ const ContactInfo = ({ price }) => {
         </div>
         <div className="flex flex-row mt-2">
           <AiFillStar size={19} className="fill-yellow-500" />
-          4.5 <span className="text-blue-700 ">(38 Reviews)</span>&ensp; - Very
+          4.5 <span className="text-pink-750 ">(38 Reviews)</span>&ensp; - Very
           Good!
         </div>
         <br />
@@ -59,16 +59,16 @@ const ContactInfo = ({ price }) => {
           <div className="border-b-2 w-full flex flex-row">
             <div className="border-r-2 w-1/2 p-2 flex flex-col">
               <span>Check In</span>
-              <span className="text-blue-700">Aug 1</span>
+              <span className="text-pink-750">Aug 1</span>
             </div>
             <div className="flex w-1/2 p-2 flex-col">
               <span>Check Out</span>
-              <span className="text-blue-700">Aug 25</span>
+              <span className="text-pink-750">Aug 25</span>
             </div>
           </div>
           <div className="flex p-2 flex-col">
             <span>Guests</span>
-            <span className="text-blue-700">2 guests</span>
+            <span className="text-pink-750">2 guests</span>
           </div>
         </div>
         <div className="flex flex-row justify-between mt-3">
