@@ -157,7 +157,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
               "
             >
               <LocationCard locationValue={listing.locationValue}/>
-              <ContactInfo/>
+              <ContactInfo price = {listing.price}/>
               <Gallery/>
             </div>
             

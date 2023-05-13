@@ -8,6 +8,7 @@ import { Player } from 'video-react';
 import Heading from "../Heading";
 import HeartButton from "../HeartButton";
 import Rating from '@mui/material/Rating';
+import { RiShareForwardLine } from "react-icons/ri";
 
 interface ListingHeadProps {
   title: string;
@@ -40,13 +41,20 @@ const ListingHead: React.FC<ListingHeadProps> = ({
         <div>&ensp;{`${location?.label}, ${location?.region}`}</div>
       </div>
       </div>
-      <div className=" border-2 rounded-3xl flex flex-row mt-3 mb-2 justify-center items-center pl-2 pr-2"> Save &ensp;
-         <HeartButton 
+      <div>
+        <div className=" border-2 rounded-3xl flex flex-row justify-center items-center pl-2 pr-2"> Save &ensp;
+          <HeartButton 
             listingId={id}
             currentUser={currentUser}
           />
-          </div>
         </div>
+        <div className=" border-2 rounded-3xl flex flex-row mt-1 justify-center items-center pl-2 pr-2"> Share &ensp;
+        <RiShareForwardLine
+        size={24}
+      />
+        </div>
+      </div>
+      </div>
       <div className="
           w-full
           mt-3
