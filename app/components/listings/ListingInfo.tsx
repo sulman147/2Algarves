@@ -119,7 +119,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
       </div>
       
       <div className="
-      text-base font-normal text-black p-3">
+      text-base font-normal text-black p-4">
         <ReadMore>
         This is without doubt THE BEST LOCATION you could ever ask for when visiting Sydney.
         2 minute walk to everything that is wonderful and local in the inner-city village of Surry Hills, and a short walk further to Sydney CBD, Hyde Park or Centennial Park. Across the road from the iconic Sydney Cricket Ground and other sporting venues, 15 minutes to Sydney beautiful eastern suburbs beaches including the world famous Bondi Beach.

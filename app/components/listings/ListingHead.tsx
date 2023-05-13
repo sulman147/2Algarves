@@ -40,10 +40,12 @@ const ListingHead: React.FC<ListingHeadProps> = ({
         <div>&ensp;{`${location?.label}, ${location?.region}`}</div>
       </div>
       </div>
-      <HeartButton 
+      <div className=" border-2 rounded-3xl flex flex-row mt-3 mb-2 justify-center items-center pl-2 pr-2"> Save &ensp;
+         <HeartButton 
             listingId={id}
             currentUser={currentUser}
           />
+          </div>
         </div>
       <div className="
           w-full
