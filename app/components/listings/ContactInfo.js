@@ -21,8 +21,29 @@ const ContactInfo = ({ price }) => {
       </div>
       <hr />
       <div className="p-4">
-        <div>
-          <span className="text-3xl">$ {price}</span> /Night
+        <div className="flex flex-row justify-between">
+          <div>
+            <span className="text-3xl">$ {price}</span> /Night{" "}
+          </div>
+          <div
+            className="
+            hidden
+            md:block
+            text-sm 
+            text-white
+            font-semibold 
+            py-2 
+            px-2 
+            bg-pink-750
+            rounded-full 
+            hover:bg-orange-700 
+            hover:text-white 
+            transition 
+            cursor-pointer
+          "
+          >
+            Contact Host
+          </div>
         </div>
         <div className="flex flex-row mt-2">
           <AiFillStar size={19} className="fill-yellow-500" />
