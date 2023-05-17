@@ -18,6 +18,7 @@ import ListingReservation from "@/app/components/listings/ListingReservation";
 import ContactInfo from "@/app/components/listings/ContactInfo";
 import Ammenities from "@/app/components/listings/Ammenities";
 import Gallery from "@/app/components/listings/Gallery";
+import Reviews from "@/app/components/listings/Reviews";
 import LocationCard from "@/app/components/listings/LocationCard";
 
 const initialDateRange = {
@@ -159,10 +160,10 @@ const ListingClient: React.FC<ListingClientProps> = ({
               <LocationCard locationValue={listing.locationValue}/>
               <ContactInfo price = {listing.price}/>
               <Gallery/>
+              
             </div>
-            
-           
           </div>
+          <Reviews user={listing.user}/>
           
         </div>
       </div>
