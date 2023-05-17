@@ -118,6 +118,72 @@ function Reviews({ user }) {
           to the built in charger. It was amazingly
         </div>
       </div>
+      <hr />
+      <div className="p-5">
+        <div className="flex w-full flex-row justify-between">
+          <div className="flex w-1/2 flex-row align-middle">
+            <div className=" align-middle">
+              <Avatar src={user?.image} />
+            </div>
+            <div className="flex flex-col align-middle pl-4">
+              <span>Ellen</span>
+              <span>May 2023</span>
+            </div>
+          </div>
+          <div className="w-1/2">
+            <Rating className="mt-2" name="size-medium" defaultValue={2} />
+          </div>
+        </div>
+        <div>
+          The most beautifully designed space - we loved everything about it!
+          Every need had been thought of - from the coffee station in the room
+          to the built in charger. It was amazingly
+        </div>
+      </div>
+      <hr />
+      <div className="p-5">
+        <div className="flex w-full flex-row justify-between">
+          <div className="flex w-1/2 flex-row align-middle">
+            <div className=" align-middle">
+              <Avatar src={user?.image} />
+            </div>
+            <div className="flex flex-col align-middle pl-4">
+              <span>Ellen</span>
+              <span>May 2023</span>
+            </div>
+          </div>
+          <div className="w-1/2">
+            <Rating className="mt-2" name="size-medium" defaultValue={2} />
+          </div>
+        </div>
+        <div>
+          The most beautifully designed space - we loved everything about it!
+          Every need had been thought of - from the coffee station in the room
+          to the built in charger. It was amazingly
+        </div>
+      </div>
+      <hr />
+      <div className="p-5">
+        <div className="flex w-full flex-row justify-between">
+          <div className="flex w-1/2 flex-row align-middle">
+            <div className=" align-middle">
+              <Avatar src={user?.image} />
+            </div>
+            <div className="flex flex-col align-middle pl-4">
+              <span>Ellen</span>
+              <span>May 2023</span>
+            </div>
+          </div>
+          <div className="w-1/2">
+            <Rating className="mt-2" name="size-medium" defaultValue={2} />
+          </div>
+        </div>
+        <div>
+          The most beautifully designed space - we loved everything about it!
+          Every need had been thought of - from the coffee station in the room
+          to the built in charger. It was amazingly
+        </div>
+      </div>
     </div>
   );
 }
