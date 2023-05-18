@@ -99,13 +99,13 @@ function Reviews({ user }) {
       <hr />
       <div className="p-5">
         <div className="flex w-full flex-row justify-between">
-          <div className="flex w-1/2 flex-row align-middle">
-            <div className=" align-middle">
+          <div className="flex w-1/2 mb-2 flex-row align-middle">
+            <div className=" mt-1">
               <Avatar src={user?.image} />
             </div>
             <div className="flex flex-col align-middle pl-4">
-              <span>Ellen</span>
-              <span>May 2023</span>
+              <span className="font-semibold">Ellen</span>
+              <span className="font-light text-neutral-50">May 2023</span>
             </div>
           </div>
           <div className="w-1/2">
@@ -121,13 +121,13 @@ function Reviews({ user }) {
       <hr />
       <div className="p-5">
         <div className="flex w-full flex-row justify-between">
-          <div className="flex w-1/2 flex-row align-middle">
-            <div className=" align-middle">
+          <div className="flex w-1/2 mb-2 flex-row align-middle">
+            <div className=" mt-1">
               <Avatar src={user?.image} />
             </div>
             <div className="flex flex-col align-middle pl-4">
-              <span>Ellen</span>
-              <span>May 2023</span>
+              <span className="font-semibold">Ellen</span>
+              <span className="font-light text-neutral-50">May 2023</span>
             </div>
           </div>
           <div className="w-1/2">
@@ -143,13 +143,13 @@ function Reviews({ user }) {
       <hr />
       <div className="p-5">
         <div className="flex w-full flex-row justify-between">
-          <div className="flex w-1/2 flex-row align-middle">
-            <div className=" align-middle">
+          <div className="flex w-1/2 mb-2 flex-row align-middle">
+            <div className=" mt-1">
               <Avatar src={user?.image} />
             </div>
             <div className="flex flex-col align-middle pl-4">
-              <span>Ellen</span>
-              <span>May 2023</span>
+              <span className="font-semibold">Ellen</span>
+              <span className="font-light text-neutral-50">May 2023</span>
             </div>
           </div>
           <div className="w-1/2">
@@ -165,13 +165,13 @@ function Reviews({ user }) {
       <hr />
       <div className="p-5">
         <div className="flex w-full flex-row justify-between">
-          <div className="flex w-1/2 flex-row align-middle">
-            <div className=" align-middle">
+          <div className="flex w-1/2 mb-2 flex-row align-middle">
+            <div className=" mt-1">
               <Avatar src={user?.image} />
             </div>
             <div className="flex flex-col align-middle pl-4">
-              <span>Ellen</span>
-              <span>May 2023</span>
+              <span className="font-semibold">Ellen</span>
+              <span className="font-light text-neutral-50">May 2023</span>
             </div>
           </div>
           <div className="w-1/2">
