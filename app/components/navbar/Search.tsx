@@ -39,7 +39,7 @@ const Search = () => {
       const start = getDateINOUT(startDate);
       const end = getDateINOUT(endDate);
       console.log("duration",startDate,endDate)
-      let diff = `${start} - ${end}`
+      let diff = `${end} to ${start} `
 
       // if (diff === 0) {
       //   diff = 1;
