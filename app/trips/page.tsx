@@ -32,7 +32,7 @@ const TripsPage = async () => {
           subtitle="Looks like you havent reserved any trips."
         />
         
-      <Footer/>
+      
       </ClientOnly>
     );
   }
@@ -43,6 +43,7 @@ const TripsPage = async () => {
         reservations={reservations}
         currentUser={currentUser}
       />
+      <Footer/>
     </ClientOnly>
   );
 }
