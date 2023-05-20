@@ -37,7 +37,7 @@ const Search = () => {
   const durationLabel = useMemo(() => {
     if (startDate && endDate) {
       const start = getDateINOUT(startDate);
-      const end = getDateINOUT(startDate);
+      const end = getDateINOUT(endDate);
       console.log("duration",startDate,endDate)
       let diff = `${start} - ${end}`
 
