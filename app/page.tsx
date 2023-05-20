@@ -7,6 +7,7 @@ import getListings, {
 } from "@/app/actions/getListings";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
+import Footer from "./components/Footer";
 
 interface HomeProps {
   searchParams: IListingsParams

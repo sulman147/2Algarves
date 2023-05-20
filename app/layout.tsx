@@ -11,6 +11,8 @@ import ToasterProvider from '@/app/providers/ToasterProvider';
 import './globals.css'
 import ClientOnly from './components/ClientOnly';
 import getCurrentUser from './actions/getCurrentUser';
+import ReviewModel from './components/modals/ReviewModel';
+import Footer from './components/Footer';
 
 export const metadata = {
   title: 'Algarve',
@@ -36,12 +38,16 @@ export default async function RootLayout({
           <LoginModal />
           <RegisterModal />
           <SearchModal />
+          <ReviewModel/>
           <RentModal />
           <Navbar currentUser={currentUser} />
+          
         </ClientOnly>
         <div className="pb-20 pt-28">
           {children}
+          
         </div>
+        <Footer/>
       </body>
     </html>
   )
