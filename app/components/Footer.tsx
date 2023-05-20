@@ -15,6 +15,7 @@ function Footer() {
             bg-white
             p-5
             px-24
+            mt-20
             flex
             justify-center
             flex-row

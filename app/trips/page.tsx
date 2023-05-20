@@ -6,6 +6,7 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import getReservations from "@/app/actions/getReservations";
 
 import TripsClient from "./TripsClient";
+import Footer from "../components/Footer";
 
 const TripsPage = async () => {
   const currentUser = await getCurrentUser();
@@ -30,6 +31,8 @@ const TripsPage = async () => {
           title="No trips found"
           subtitle="Looks like you havent reserved any trips."
         />
+        
+      <Footer/>
       </ClientOnly>
     );
   }

@@ -6,6 +6,7 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import getListings from "@/app/actions/getListings";
 
 import PropertiesClient from "./PropertiesClient";
+import Footer from "../components/Footer";
 
 const PropertiesPage = async () => {
   const currentUser = await getCurrentUser();
@@ -36,6 +37,8 @@ const PropertiesPage = async () => {
         listings={listings}
         currentUser={currentUser}
       />
+      
+      <Footer/>
     </ClientOnly>
   );
 }

@@ -6,6 +6,7 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import getReservations from "@/app/actions/getReservations";
 
 import TripsClient from "./ReservationsClient";
+import Footer from "../components/Footer";
 
 const ReservationsPage = async () => {
   const currentUser = await getCurrentUser();
@@ -40,6 +41,8 @@ const ReservationsPage = async () => {
         reservations={reservations}
         currentUser={currentUser}
       />
+      
+      <Footer/>
     </ClientOnly>
   );
 }

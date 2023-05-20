@@ -49,7 +49,9 @@ const Home = async ({ searchParams }: HomeProps) => {
             />
           ))}
         </div>
+        
       </Container>
+      <Footer/>
     </ClientOnly>
   )
 }
