@@ -29,8 +29,8 @@ const Search = () => {
   const getDateINOUT = (date : any) =>{
     let d = new Date(date);
     let year = d.getFullYear()
-    let day = d.getDay()
-    let month = d.getMonth()
+    let day = d.getDate()
+    let month = d.getMonth() + 1
     return `${day}/${month}/${year}`
   }
 
@@ -39,7 +39,7 @@ const Search = () => {
       const start = getDateINOUT(startDate);
       const end = getDateINOUT(endDate);
       console.log("duration",startDate,endDate)
-      let diff = `${end} to ${start} `
+      let diff = `${start} to ${end} `
 
       // if (diff === 0) {
       //   diff = 1;
