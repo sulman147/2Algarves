@@ -23,23 +23,32 @@ const Search = () => {
       return getByValue(locationValue as string)?.label;
     }
 
-    return 'Anywhere';
+    return 'Search Destination';
   }, [locationValue, getByValue]);
+
+  const getDateINOUT = (date : any) =>{
+    let d = new Date(date);
+    let year = d.getFullYear()
+    let day = d.getDay()
+    let month = d.getMonth()
+    return `${day}/${month}/${year}`
+  }
 
   const durationLabel = useMemo(() => {
     if (startDate && endDate) {
-      const start = new Date(startDate as string);
-      const end = new Date(endDate as string);
-      let diff = differenceInDays(end, start);
+      const start = getDateINOUT(startDate);
+      const end = getDateINOUT(startDate);
+      console.log("duration",startDate,endDate)
+      let diff = `${start} - ${end}`
 
-      if (diff === 0) {
-        diff = 1;
-      }
+      // if (diff === 0) {
+      //   diff = 1;
+      // }
 
-      return `${diff} Days`;
+      return `${diff}`;
     }
 
-    return 'Any Week'
+    return 'Select Dates'
   }, [startDate, endDate]);
 
   const guestLabel = useMemo(() => {
@@ -47,7 +56,7 @@ const Search = () => {
       return `${guestCount} Guests`;
     }
 
-    return 'Add Guests';
+    return 'Adults, Children';
   }, [guestCount]);
 
   return ( 
@@ -58,7 +67,7 @@ const Search = () => {
         w-full 
         md:w-auto 
         py-2 
-        rounded-full 
+        rounded-xl 
         shadow-sm 
         hover:shadow-md 
         transition 
@@ -76,25 +85,25 @@ const Search = () => {
         <div 
           className="
             text-sm 
-            font-semibold 
+            flex
+            flex-col
             px-6
           "
-        >
-          {locationLabel}
+        ><span className="font-semibold">Which Place?</span>
+          <span>{locationLabel}</span>
         </div>
         <div 
           className="
-            hidden 
-            sm:block 
-            text-sm 
-            font-semibold 
-            px-6 
-            border-x-[1px] 
-            flex-1 
-            text-center
+          text-sm 
+          flex
+          flex-col
+          px-6
+          border-x-[1px] 
           "
         >
-          {durationLabel}
+          <span className="font-semibold">In-Out</span>
+          <span>{durationLabel}</span>
+          
         </div>
         <div 
           className="
@@ -108,7 +117,14 @@ const Search = () => {
             gap-3
           "
         >
-          <div className="hidden sm:block">{guestLabel}</div>
+          <div className="text-sm 
+            flex
+            flex-col
+            px-6">
+          <span className="font-semibold">Guests</span>
+          <span>{guestLabel}</span>
+            
+            </div>
           <div 
             className="
             p-2 
