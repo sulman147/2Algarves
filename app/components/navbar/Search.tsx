@@ -111,7 +111,6 @@ const Search = () => {
             text-sm 
             pl-6 
             pr-2 
-            text-gray-600 
             flex 
             flex-row 
             items-center 
@@ -121,7 +120,7 @@ const Search = () => {
           <div className="text-sm 
             flex
             flex-col
-            px-6">
+            px-3">
           <span className="font-semibold">Guests</span>
           <span className="text-xs text-slate-500 ">{guestLabel}</span>
             
