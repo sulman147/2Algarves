@@ -34,7 +34,7 @@ function Footer() {
           <span className="pt-2 hover:text-pink-750">Our Partners</span>
         </div>
         <div className=" flex px-24 flex-col">
-          <span className="font-semibold">Folow Us</span>
+          <span className="font-semibold">Follow Us</span>
           <div className="flex flex-row mt-3 gap-2 w-full">
             <div
               className="

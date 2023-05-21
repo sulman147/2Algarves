@@ -90,7 +90,7 @@ const Search = () => {
             px-6
           "
         ><span className="font-semibold">Which Place?</span>
-          <span>{locationLabel}</span>
+          <span className="text-xs text-slate-500 ">{locationLabel}</span>
         </div>
         <div 
           className="
@@ -98,11 +98,11 @@ const Search = () => {
           flex
           flex-col
           px-6
-          border-x-[1px] 
+          border-x-[2px] 
           "
         >
           <span className="font-semibold">In-Out</span>
-          <span>{durationLabel}</span>
+          <span className="text-xs text-slate-500 ">{durationLabel}</span>
           
         </div>
         <div 
@@ -122,7 +122,7 @@ const Search = () => {
             flex-col
             px-6">
           <span className="font-semibold">Guests</span>
-          <span>{guestLabel}</span>
+          <span className="text-xs text-slate-500 ">{guestLabel}</span>
             
             </div>
           <div 
