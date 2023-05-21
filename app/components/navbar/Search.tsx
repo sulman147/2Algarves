@@ -60,6 +60,7 @@ const Search = () => {
   }, [guestCount]);
 
   return ( 
+    <div className="flex flex-row gap-3">
     <div
       onClick={searchModal.onOpen}
       className="
@@ -125,21 +126,30 @@ const Search = () => {
           <span className="text-xs text-slate-500 ">{guestLabel}</span>
             
             </div>
-          <div 
-            className="
-            p-2 
-            bg-pink-750 
-            rounded-full 
-            text-white
-            hover:bg-orange-700 
-            hover:text-white 
-            "
-          >
-            <BiSearch size={18} />
-          </div>
+          
         </div>
+        
       </div>
+      
     </div>
+    <div 
+    onClick={searchModal.onOpen}
+    className="
+    w-[54px]
+    flex
+    items-center
+    justify-center
+    p-2 
+    bg-pink-750 
+    rounded-full 
+    text-white
+    hover:bg-orange-700 
+    hover:text-white 
+    "
+  >
+    <BiSearch size={18} />
+  </div>
+  </div>
   );
 }
  
