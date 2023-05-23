@@ -7,7 +7,7 @@ import AboutClient from "./AboutClient";
 const AboutPage = async () => {
   return (
     <ClientOnly>
-      <AboutClient/>
+      {/* <AboutClient/> */}
       <Footer/>
     </ClientOnly>
   );
