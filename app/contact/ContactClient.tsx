@@ -53,9 +53,9 @@ Our best tourist</h2>
           label="Email"
           required register={register} errors={errors}        />
       <TextArea
-        id="review"
+        id="message"
         rows={5}
-        label="Review"
+        label="Message"
         disabled={false}
         register={register}  
         errors={errors}
