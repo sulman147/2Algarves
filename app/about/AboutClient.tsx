@@ -1,13 +1,10 @@
 'use client';
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 
 const AboutClient: React.FC = ({
 }) => {
-  const router = useRouter();
-
 
   return (
     <div className="p-5
