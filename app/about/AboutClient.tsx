@@ -28,7 +28,7 @@ const AboutClient: React.FC = ({
         <p className="mb-5">Millions of people around the world visit 2algarve to buy and sell creative assets, use
           smart design templates, learn creative skills or even hire freelancers. With an industryleading marketplace paired with an unlimited subscription service, 2algarve helps
           creatives like you get projects done faster</p>
-          <p>Whether it&rsquo;s graphic templates, website themes, photos, video or audio, there&rsquo;s every
+          <p>Whether it&rsquo;s graphics templates, website themes, photos, video or audio, there&rsquo;s every
           chance you&rsquo;ll spot something from 2algarve today, from a café logo to a Hollywood title
           sequence!
           </p>
