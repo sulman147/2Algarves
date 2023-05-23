@@ -6,6 +6,7 @@ import { CiCircleMore } from "react-icons/ci";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -23,8 +24,8 @@ function Footer() {
           "
       >
         <div className="flex px-24 flex-col">
-          <span className="pt-2 hover:text-pink-750">About us</span>
-          <span className="pt-2 hover:text-pink-750">Contact us</span>
+        <Link href={'/about'}><span className="pt-2 hover:text-pink-750">About us</span></Link>
+        <Link href={'/contact'}> <span className="pt-2 hover:text-pink-750">Contact us</span></Link>
           <span className="pt-2 hover:text-pink-750">2Algarve Blogs</span>
           <span className="pt-2 hover:text-pink-750">Careers</span>
         </div>
