@@ -39,14 +39,14 @@ function Footer() {
           <div className="flex flex-row mt-3 gap-2 w-full">
             <div
               className="
-            p-2 
-            bg-pink-750 
-            rounded-full 
-            text-white
-            hover:bg-orange-700 
-            hover:text-white 
-            "
-            >
+              p-2 
+              bg-pink-750 
+              rounded-full 
+              text-white
+              hover:bg-orange-700 
+              hover:text-white 
+              "
+              >
               <FaFacebookF size={24} />
             </div>
             <div
