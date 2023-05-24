@@ -8,9 +8,7 @@ const ContactPage = async () => {
 
   return (
     <ClientOnly>
-      <ContactClient
-       
-      />
+      <ContactClient/>
       <Footer/>
     </ClientOnly>
   );
