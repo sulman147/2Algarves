@@ -11,6 +11,8 @@ import { Checkbox } from "@mui/material";
 import Link from "next/link";
 import LocationMap from "../components/listings/LocationMap";
 import { BiLocationPlus, BiPhone } from "react-icons/bi";
+import { FaLocationArrow } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
 
 const ContactClient: React.FC = ({
 }) => {
@@ -32,10 +34,10 @@ const ContactClient: React.FC = ({
     <div className="relative block">
     <Image
       src="/images/contact.png"
-        width={300} height={200}  alt={""}
-        className="w-full h-1/3 mb-5 -mt-10 aspect-auto opacity-4"
+        width={300} height={200}  alt={""} unoptimized={true}
+        className="w-full h-1/3 mb-5 -mt-10 "
       />
-      <span className="absolute top-28 w-full block text-center text-4xl font-bold text-white">Your Gateway to Golden Coast</span>
+      <span className="absolute top-28 w-full block text-center text-4xl font-bold text-white">Contact Us</span>
     <div className="p-5
       px-24
       flex
@@ -49,7 +51,7 @@ const ContactClient: React.FC = ({
       <h2 className="mb-5">Welcome to 2algarve. Find the best places in Algarve with the help of
 Our best tourist</h2>
 
-    <div className="flex gap-10 w-4/6 ">
+    <div className="flex gap-10 w-[75%] ">
       <div className="flex flex-col gap-5 w-full">
       <Input
           id="name"
@@ -79,18 +81,18 @@ Our best tourist</h2>
         />
       </div>
       </div>
-      <div className="w-full">
-      <div className="flex flex-col align-middle gap-3">
-        <BiLocationPlus size={50} color="#cb1670"/> <span>Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</span>
+      <div className="w-full mt-10">
+      <div className="flex flex-row align-middle gap-3">
+        <CiLocationOn size={60} color="#cb1670"/> <span className="text-[1.1rem]">Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</span>
         </div>
-        <Link href="tel:+351 911 126 160" className="flex flex-col align-middle mt-10"><BiPhone color="#cb1670" size={50}/> <span>+351 911 126 160</span></Link>
+        <Link href="tel:+351 911 126 160" className="flex flex-row align-middle mt-10"><BiPhone color="#cb1670" size={40}/> <span className="text-[1.1rem]">+351 911 126 160</span></Link>
       
       </div>
       
     </div>
 
-      <div className="mt-10 w-4/6" >
-        <h2 className="text-2xl font-bold">Reviews & Directions</h2>
+      <div className="mt-10 w-[75%]" >
+        <h2 className="text-2xl font-bold">Directions</h2>
         <LocationMap locationValue="Albufeira"/>
       </div>
     </div>

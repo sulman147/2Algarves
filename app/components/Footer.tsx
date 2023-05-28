@@ -26,7 +26,7 @@ function Footer() {
         <div className="flex px-24 flex-col">
         <Link href={'/about'}><span className="pt-2 hover:text-pink-750">About us</span></Link>
         <Link href={'/contact'}> <span className="pt-2 hover:text-pink-750">Contact us</span></Link>
-          <span className="pt-2 hover:text-pink-750">2Algarve Blogs</span>
+        <Link href={'/blog'}> <span className="pt-2 hover:text-pink-750">2Algarve Blogs</span></Link>
           <span className="pt-2 hover:text-pink-750">Careers</span>
         </div>
         <div className=" flex px-24 flex-col">
