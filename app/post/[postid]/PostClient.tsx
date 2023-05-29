@@ -40,7 +40,7 @@ const PostClient: React.FC<Props> = ({ postId
             className="w-full h-[50vh] mb-5 rounded-lg object-cover mt-2"
           />
         </div>
-        <div className="bg-white mt-8 h-full rounded-xl align-middle p-5 gap-5 flex flex-col w-[30%]">
+        <div className="bg-white mt-10 h-full rounded-xl align-middle p-5 gap-5 flex flex-col w-[30%]">
         <Input
           id="name"
           label="Name"
