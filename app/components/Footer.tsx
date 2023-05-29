@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
-import Container from "@/app/components/Container";
-import ClientOnly from "../components/ClientOnly";
-import { CiCircleMore } from "react-icons/ci";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import Link from "next/link";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -18,23 +16,29 @@ function Footer() {
             px-24
             mt-20
             flex
-            justify-center
+            justify-between
             flex-row
             w-full
           "
-      >
-        <div className="flex px-24 flex-col">
+      > <div className=" w-[15%] flex items-center justify-center ">
+        <Image
+            src="/images/logo.png"
+            width={300} height={200} alt={""} unoptimized={true}
+            style={{height: '50%'}}
+          />
+        </div>
+        <div className="flex  gap-3 font-medium flex-col">
         <Link href={'/about'}><span className="pt-2 hover:text-pink-750">About us</span></Link>
         <Link href={'/contact'}> <span className="pt-2 hover:text-pink-750">Contact us</span></Link>
-        <Link href={'/blog'}> <span className="pt-2 hover:text-pink-750">2Algarve Blogs</span></Link>
+        <Link href={'/blog'}> <span className="pt-2 hover:text-pink-750">Blogs</span></Link>
           <span className="pt-2 hover:text-pink-750">Careers</span>
         </div>
-        <div className=" flex px-24 flex-col">
+        <div className=" flex  gap-3 font-medium flex-col">
           <span className="pt-2 hover:text-pink-750">Signup</span>
           <span className="pt-2 hover:text-pink-750">Trust & Safety</span>
           <span className="pt-2 hover:text-pink-750">Our Partners</span>
         </div>
-        <div className=" flex px-24 flex-col">
+        <div className=" flex  flex-col">
           <span className="font-semibold">Follow Us</span>
           <div className="flex flex-row mt-3 gap-2 w-full">
             <div

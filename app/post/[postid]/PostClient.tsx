@@ -5,7 +5,7 @@ import Image from "next/image";
 import Input from "@/app/components/inputs/Input";
 import { FieldValues, useForm } from "react-hook-form";
 import Button from "@/app/components/Button";
-import { FaFacebook, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Heading from "@/app/components/Heading";
 
 interface Props {
@@ -29,7 +29,7 @@ const PostClient: React.FC<Props> = ({ postId
   return ( 
     
     <Container>
-      <div className=" h-[50vh] gap-5 flex flex-row w-full">
+      <div className=" h-[60vh] mt-5 gap-5 flex flex-row w-full">
         <div className="flex flex-col  w-[70%]">
         <Heading
         title="️The Unexpected Benefits that Couchsurfing Brings"
@@ -37,10 +37,10 @@ const PostClient: React.FC<Props> = ({ postId
         <Image
           src="/images/1.jpg"
             width={300} height={600}  alt={""} unoptimized={true}
-            className="w-full h-[50vh] mb-5 rounded-lg object-cover mt-2"
+            className="w-full h-full mb-5 rounded-lg object-cover mt-3"
           />
         </div>
-        <div className="bg-white mt-10 h-full rounded-xl align-middle p-5 gap-5 flex flex-col w-[30%]">
+        <div className="bg-white mt-10 h-full  left-0 top-0 rounded-xl align-middle p-5 gap-5 flex flex-col w-[30%]">
         <Input
           id="name"
           label="Name"
@@ -55,6 +55,7 @@ const PostClient: React.FC<Props> = ({ postId
           onClick={()=>{}}
         />
         <hr />
+        <h1 className="font-bold">Follow Us :</h1>
         <div className="flex justify-center  gap-5">
         <div 
             className="
@@ -89,6 +90,18 @@ const PostClient: React.FC<Props> = ({ postId
             "
           >
           <FaInstagram size={20} /> </div>
+          <div 
+            className="
+            p-2 
+            bg-pink-750 
+            rounded-full 
+            text-white
+            hover:bg-orange-700 
+            hover:text-white 
+            "
+          >
+          <FaYoutube size={20} /> </div>
+          
         </div>
         
         
@@ -96,8 +109,8 @@ const PostClient: React.FC<Props> = ({ postId
         </div>
 
       </div>
-      <div className="bg-white rounded-xl  mt-16 flex flex-col p-6 w-full">
-      <div className="">
+      <div className=" rounded-xl w-[70%]  mt-16 flex flex-col">
+      <div >
       <span className="font-normal bg-[#cb1670] text-white px-2 py-2 rounded-md text-sm">25 May, 2023</span>
         </div>
         <div className="mt-3 text-lg font-light">
