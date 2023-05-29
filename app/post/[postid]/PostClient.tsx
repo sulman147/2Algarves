@@ -6,6 +6,7 @@ import Input from "@/app/components/inputs/Input";
 import { FieldValues, useForm } from "react-hook-form";
 import Button from "@/app/components/Button";
 import { FaFacebook, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Heading from "@/app/components/Heading";
 
 interface Props {
   postId: number;
@@ -30,7 +31,9 @@ const PostClient: React.FC<Props> = ({ postId
     <Container>
       <div className=" h-[50vh] gap-5 flex flex-row w-full">
         <div className="flex flex-col  w-[70%]">
-        <h2 className=" text-xl font-bold" >The Unexpected Benefits that Couchsurfing Brings</h2>
+        <Heading
+        title="️The Unexpected Benefits that Couchsurfing Brings"
+      />
         <Image
           src="/images/1.jpg"
             width={300} height={600}  alt={""} unoptimized={true}
