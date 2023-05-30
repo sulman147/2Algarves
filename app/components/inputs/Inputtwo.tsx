@@ -18,7 +18,7 @@ interface InputProps {
   errors: FieldErrors
 }
 
-const Input: React.FC<InputProps> = ({
+const Inputtwo: React.FC<InputProps> = ({
   id,
   label,
   type = "text", 
@@ -50,8 +50,8 @@ const Input: React.FC<InputProps> = ({
         className={`
           peer
           w-full
-          p-2
-          pt-4 
+          p-4
+          pt-6 
           font-light 
           bg-white 
           border-2
@@ -89,4 +89,4 @@ const Input: React.FC<InputProps> = ({
    );
 }
  
-export default Input;
+export default Inputtwo;
