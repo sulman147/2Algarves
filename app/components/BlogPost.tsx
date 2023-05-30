@@ -36,7 +36,7 @@ const BlogPost: React.FC<Props> = ({ id, date, imageSrc, title }) => {
         <div className="font-normal text-[#cb1670] px-2 text-sm">
         {date}
         </div>
-        <h2 className=" text-xl mb-2 px-2 font-bold line-clamp-1 " >{title}</h2>
+        <h2 className=" text-xl mb-2 px-2 font-bold line-clamp-2 " >{title}</h2>
       </div>
     </div>
   );

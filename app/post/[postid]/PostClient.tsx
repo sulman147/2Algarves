@@ -80,7 +80,7 @@ const PostClient: React.FC<Props> = ({ postId
             onClick={() => { }}
           />
           <hr />
-          <h1 className="font-bold">Connect :</h1>
+          <h1 className="font-bold text-lg">Connect :</h1>
           <div className="flex justify-center  gap-5">
             <div
               className="
