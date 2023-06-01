@@ -7,13 +7,19 @@ const AboutClient: React.FC = ({
 }) => {
 
   return (
-    <div className="relative block">
-    <Image
-      src="/images/aboutpic.png"
-        width={300} height={200}  alt={""} unoptimized={true}
-        className="w-full h-1/3 mb-5 -mt-10 "
-      />
-      <span className="absolute top-28 w-full block text-center text-5xl font-bold text-white">About</span>
+    <div className="">
+       <div className={`flex flex-col  relative h-[55vh] justify-end mb-3 bg-cover gap-4	pl-8 pr-8`} style={{ backgroundImage: `url('/images/aboutpicture.jpg')` }}>
+      <div className="absolute align-middle flex-col  flex justify-center  h-[55vh] inset-0 bg-gradient-to-b from-[#fff0] to-black bg-opacity-50">
+      <div className="items-center flex justify-center mb-6 ">
+      <Image
+              src="/images/logo.png"
+              width={300} height={600} alt={""} unoptimized={true}
+              className=" mt-3"
+            />
+            </div>
+      <h1 className=" items-center flex justify-center text-white font-bold md:text-2xl lg:text-4xl">Your Gateway to the Golden Coast!</h1>
+      </div>
+    </div>
     
     <div className="p-5
       px-24
@@ -22,10 +28,6 @@ const AboutClient: React.FC = ({
       items-center
       flex-col
       w-full" >
- 
-      
-      
-      
       <div className="text-left w-[75%]">
 
         <h2 className="text-4xl font-bold mb-5 ">We help people bring their creative ideas to life</h2>

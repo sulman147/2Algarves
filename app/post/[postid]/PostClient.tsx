@@ -34,13 +34,27 @@ const PostClient: React.FC<Props> = ({ postId
           <Heading
             title="️The Unexpected Benefits that Couchsurfing Brings"
           />
-          <div className=" h-[60vh]">
-            <Image
-              src="/images/1.jpg"
-              width={300} height={600} alt={""} unoptimized={true}
-              className="w-full h-full mb-5 rounded-lg object-cover mt-3"
-            />
-          </div>
+         <div className="
+          w-full
+          mt-3
+          h-[20vh]
+          overflow-hidden 
+          rounded-xl
+          relative
+          video-responsive
+        "
+      >
+         <iframe
+      width="1053"
+      height="480"
+      src={`https://www.youtube.com/embed/d1DhBZVL5Pg`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    />
+        
+      </div>
           <div className="mt-8" >
             <span className="font-normal bg-[#cb1670] text-white px-2 py-2 rounded-md text-sm">25 May, 2023</span>
           </div>
