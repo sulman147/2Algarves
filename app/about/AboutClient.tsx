@@ -36,16 +36,16 @@ const AboutClient: React.FC = ({
         <p className="mb-3 text-[1.1rem]">Millions of people around the world visit 2algarve to buy and sell creative assets, use
           smart design templates, learn creative skills or even hire freelancers. With an industryleading marketplace paired with an unlimited subscription service, 2algarve helps
           creatives like you get projects done faster</p>
-          <p className="mb-5 text-[1.1rem]">Whether it&rsquo;s graphic templates, website themes, photos, video or audio, there&rsquo;s every
+          <p className="mb-3 text-[1.1rem]">Whether it&rsquo;s graphic templates, website themes, photos, video or audio, there&rsquo;s every
           chance you&rsquo;ll spot something from 2algarve today, from a café logo to a Hollywood title
           sequence!
           </p>
       </div>
-      <div className="w-[75%] text-center m-16">
+      <div className="w-[75%] text-center my-3 ">
         <div className="border-2 text-white text-[1.3rem] h-[160px] bg-[#cb1670] rounded-lg p-10">Our mission is to find every family the space they need to relax <br /> reconnect, and enjoy precious time away together.</div>
       </div>
       
-      <div className="w-[75%]">
+      <div className="w-[75%] mt-3">
         <h2 className="text-4xl font-bold mb-5">Meet The Founder</h2>
         <div className="flex gap-5">
           <div className="min-w-fit "><Image
