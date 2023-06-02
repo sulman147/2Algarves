@@ -18,6 +18,8 @@ const AboutClient: React.FC = ({
             />
             </div>
       <h1 className=" items-center flex justify-center text-white font-bold md:text-2xl lg:text-4xl">Your Gateway to the Golden Coast!</h1>
+      <h1 className=" items-center flex justify-center text-white font-normal mt-2 md:text-lg lg:text-2xl">Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</h1>
+      
       </div>
     </div>
     
