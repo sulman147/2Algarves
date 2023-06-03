@@ -8,7 +8,7 @@ const AboutClient: React.FC = ({
 
   return (
     <div className="-mt-6">
-       <div className={`flex flex-col  relative h-[55vh] justify-end  bg-cover gap-4	pl-8 pr-8`} style={{ backgroundImage: `url('/images/aboutpicture.jpg')` }}>
+       <div className={`flex flex-col  relative h-[55vh] justify-end  bg-cover gap-4	pl-8 pr-8`} style={{ backgroundImage: `url('/images/contact.jpg')` }}>
       <div className="absolute align-middle flex-col  flex justify-center   inset-0 bg-gradient-to-b from-[#fff0] to-black bg-opacity-50">
       <div className="items-center flex justify-center mb-6 ">
       <Image

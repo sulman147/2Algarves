@@ -33,7 +33,7 @@ const ContactClient: React.FC = ({
 
   return (
     <div className="-mt-6">
-      <div className={`flex flex-col  relative h-[55vh] justify-end  bg-cover gap-4	pl-8 pr-8`} style={{ backgroundImage: `url('/images/contact.jpg')` }}>
+      <div className={`flex flex-col  relative h-[55vh] justify-end  bg-cover gap-4	pl-8 pr-8`} style={{ backgroundImage: `url('/images/contactus.jpg')` }}>
         <div className="absolute align-middle flex-col  flex justify-center   inset-0 bg-gradient-to-b from-[#fff0] to-black bg-opacity-50">
           <h1 className=" items-center flex justify-center text-white font-bold md:text-2xl lg:text-4xl">Contact Us</h1>
         </div>
@@ -71,7 +71,7 @@ const ContactClient: React.FC = ({
               required
             />
             <div className="flex ">
-              <Checkbox {...label} /><span className="font-light">By submitting this form, you are agreeing with our private policy</span>
+              <Checkbox {...label} /><span className="font-light">By submitting this form, you are agreeing with our <span className="text-[#cb1670] cursor-pointer">private policy</span></span>
             </div>
             <div className="p-4">
               <Button
@@ -96,9 +96,11 @@ const ContactClient: React.FC = ({
             >
               <CiLocationOn size={24} /> </div> <span className=" pl-5 text-[1.1rem]">Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</span>
             </div>
-            <Link href="tel:+351 911 126 160" className="flex flex-row align-middle mt-5"><div
+            <div className="flex flex-row align-middle gap-3">
+            <div
               className="
             p-2 
+            h-10
             bg-pink-750 
             rounded-full 
             text-white
@@ -106,7 +108,9 @@ const ContactClient: React.FC = ({
             hover:text-white 
             "
             >
-              <BiPhone size={24} /> </div> <span className=" mt-2 pl-5 text-[1.1rem]">+351 911 126 160</span></Link>
+              <BiPhone size={24} /> </div> <span className=" mt-2 pl-5 text-[1.1rem]">+351 911 126 160</span>
+            </div>
+          
               <div className="flex flex-row align-middle mt-5 gap-3">
             <div
               className="
