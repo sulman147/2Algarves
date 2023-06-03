@@ -45,10 +45,7 @@ const ContactClient: React.FC = ({
       items-center
       flex-col
       w-full" >
-
-
-
-        <h2 className="text-2xl font-bold mb-5">Welcome to 2algarve. Find the best places in Algarve with the help of
+         <h2 className="text-2xl font-bold mb-5">Welcome to 2algarve. Find the best places in Algarve with the help of
           Our best tourist</h2>
         <hr/>
         <div className="flex gap-10 mt-5 w-[75%] ">

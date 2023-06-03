@@ -9,18 +9,20 @@ import Image from "next/image";
 function Footer() {
   return (
     <> <div className="flex flex-row px-10 mt-20 bg-white">
-    <div className=" flex items-center  justify-center ">
+    <div className=" flex  flex-col ml-40 justify-center ">
     <Image
       src="/images/logo.png"
-      width={300} height={200} alt={""} unoptimized={true}
+      width={200} height={100} alt={""} unoptimized={true}
     />
+    <p className="mt-2">Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</p>
+    <p className="mt-2 text-pink-750">info@2algarve.com</p>
   </div>
       <div
         className="
             bg-white
             p-5
-            px-24
-            
+            px-8
+            mr-56
             flex
             justify-around
             flex-col
@@ -59,7 +61,7 @@ function Footer() {
               hover:text-white 
               "
                 >
-                  <FaFacebookF size={24} />
+                  <FaFacebookF size={18} />
                 </div>
                 <div
                   className="
@@ -71,7 +73,7 @@ function Footer() {
             hover:text-white 
             "
                 >
-                  <AiOutlineTwitter size={24} />
+                  <AiOutlineTwitter size={18} />
                 </div>
                 <div
                   className="
@@ -83,7 +85,7 @@ function Footer() {
             hover:text-white 
             "
                 >
-                  <BsInstagram size={24} />
+                  <BsInstagram size={18} />
                 </div>
                 <div
                   className="
@@ -95,23 +97,24 @@ function Footer() {
             hover:text-white 
             "
                 >
-                  <AiFillYoutube size={24} />
+                  <AiFillYoutube size={18} />
                 </div>
               </div>
 
               <div className="flex mt-3 flex-row w-full">
-                <input name="myInput" placeholder="Email" className="border-2 pl-2 rounded-lg" />
+                <input name="myInput" placeholder="Email" className="border-2  pl-2 rounded-lg" />
                 <div
                   onClick={() => console.log("input get")}
                   className="
             hidden
             w-50
+            text-center
             md:block
             text-sm 
             text-white
             font-semibold 
             py-2 
-            ml-3
+            ml-2
             px-4
             bg-pink-750
             rounded-lg 
