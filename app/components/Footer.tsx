@@ -8,7 +8,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <> <div className="flex flex-row px-10  bg-white">
+    <> <div className="flex flex-row px-10 mt-20 bg-white">
     <div className=" flex items-center  justify-center ">
     <Image
       src="/images/logo.png"
