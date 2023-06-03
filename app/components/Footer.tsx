@@ -40,7 +40,7 @@ function Footer() {
               <Link href={'/about'}><span className="pt-2 hover:text-pink-750">About us</span></Link>
               <Link href={'/contact'}> <span className="pt-2 hover:text-pink-750">Contact us</span></Link>
               <Link href={'/blog'}> <span className="pt-2 hover:text-pink-750">Blogs</span></Link>
-              <span className="pt-2 hover:text-pink-750">Careers</span>
+              <Link href={'/careers'}> <span className="pt-2 hover:text-pink-750">Careers</span></Link>
             </div>
             <div className=" flex w-1/3 gap-2 font-medium flex-col">
               <span className="pt-2 hover:text-pink-750">Signup</span>
