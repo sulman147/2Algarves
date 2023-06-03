@@ -8,26 +8,25 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <>
+    <> <div className="flex flex-row px-10  bg-white">
+    <div className=" flex items-center  justify-center ">
+    <Image
+      src="/images/logo.png"
+      width={300} height={200} alt={""} unoptimized={true}
+    />
+  </div>
       <div
         className="
             bg-white
             p-5
             px-24
-            mt-20
+            
             flex
             justify-around
             flex-col
             w-full
           "
       >
-        {/* <div className=" w-[15%] flex items-center justify-center ">
-          <Image
-            src="/images/logo.png"
-            width={300} height={200} alt={""} unoptimized={true}
-            style={{ height: '50%' }}
-          />
-        </div> */}
           <div className="w-full ">
             <hr className="bg-black"/>
             <div className="flex flex-row w-full py-1 justify-btween">
@@ -128,6 +127,7 @@ function Footer() {
             </div>
         </div>
       </div>
+      </div> 
       <hr />
       <div
         className="
@@ -142,6 +142,7 @@ function Footer() {
       >
         Privacy Policy | Terms & Conditions | All Rights Reserved
       </div>
+      
     </>
   );
 }
