@@ -153,30 +153,29 @@ const SearchModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="More information"
+          title="Add Guest"
           subtitle="Find your perfect place!"
         />
         <Counter 
           onChange={(value) => setGuestCount(value)}
           value={guestCount}
-          title="Guests" 
-          subtitle="How many guests are coming?"
+          title="Adult (16+)" 
+          subtitle="How many adult are coming?"
         />
         <hr />
         <Counter 
           onChange={(value) => setRoomCount(value)}
           value={roomCount}
-          title="Rooms" 
-          subtitle="How many rooms do you need?"
-        />        
-        <hr />
+          title="Children (0-15)" 
+          subtitle="How many Children do you have?"
+        /><hr />
         <Counter 
           onChange={(value) => {
             setBathroomCount(value)
           }}
           value={bathroomCount}
-          title="Bathrooms"
-          subtitle="How many bahtrooms do you need?"
+          title="Pets"
+          subtitle="How many pets with you?"
         />
       </div>
     )

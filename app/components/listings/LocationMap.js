@@ -6,9 +6,9 @@ const Map = dynamic(() => import("../Map"), {
 });
 export default function LocationMap({ locationValue }) {
   const { getByValue } = useCountries();
+  const { getByLabel } = useCountries();
 
-  const coordinates = getByValue(locationValue)?.latlng;
-
+  const coordinates = getByLabel(locationValue)?.latlng;
   return (
     <div>
       <Map center={coordinates} />

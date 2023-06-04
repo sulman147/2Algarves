@@ -46,7 +46,6 @@ function Footer() {
             <div className=" flex w-1/3 gap-2 font-medium flex-col">
               <span className="pt-2 hover:text-pink-750">Signup</span>
               <span className="pt-2 hover:text-pink-750">Trust & Safety</span>
-              <span className="pt-2 hover:text-pink-750">Our Partners</span>
             </div>
             <div className=" flex w-1/3 flex-col">
               <span>Signup & Get Special Offers</span>
