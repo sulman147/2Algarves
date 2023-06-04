@@ -140,10 +140,10 @@ function Footer() {
             flex
             flex-row
             w-full
-            justify-around
+            justify-center
           "
-      >
-        Privacy Policy | Terms & Conditions | All Rights Reserved
+      ><Link href={'/privacypolicy'}><span className="pt-2 hover:text-pink-750">Privacy Policy</span></Link>&ensp; 
+        | <Link href={'/termsconditions'}><span className="pt-2 hover:text-pink-750">Terms & Conditions</span></Link>&ensp; | All Rights Reserved
       </div>
       
     </>
