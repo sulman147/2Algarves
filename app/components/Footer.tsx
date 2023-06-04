@@ -9,12 +9,13 @@ import Image from "next/image";
 function Footer() {
   return (
     <> <div className="flex flex-row px-10 mt-20 bg-white">
-    <div className=" flex  flex-col ml-40 justify-center ">
+    <div className=" flex  flex-col ml-40 p-5 ">
     <Image
       src="/images/logo.png"
       width={200} height={100} alt={""} unoptimized={true}
     />
-    <p className="mt-2">Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</p>
+    <p className="mt-2">LOJA H, 8200-362 Albufeira Albufeira</p>
+    <p className="mt-2 text-pink-750">+351 911 126 160</p>
     <p className="mt-2 text-pink-750">info@2algarve.com</p>
   </div>
       <div
@@ -30,11 +31,10 @@ function Footer() {
           "
       >
           <div className="w-full ">
-            <hr className="bg-black"/>
             <div className="flex flex-row w-full py-1 justify-btween">
-              <span className="w-1/3 text-lg font-semibold">Quick links</span>
-              <span className="w-1/3 text-lg font-semibold">More Info</span>
-              <span className="w-1/3 text-lg font-semibold">Follow Us</span></div><hr />
+              <span className="w-1/3 text-lg font-semibold"><span className="border-b-2 border-pink-750">Quick links</span></span>
+              <span className="w-1/3 text-lg font-semibold"><span className="border-b-2 border-pink-750">More Info </span></span>
+              <span className="w-1/3 text-lg font-semibold"><span className="border-b-2 border-pink-750">Follow Us </span></span></div>
           </div>
           <div className="flex flex-row w-full pt-4 justify-between">
             <div className="flex w-1/3 gap-2 font-medium flex-col">
@@ -49,7 +49,7 @@ function Footer() {
               <span className="pt-2 hover:text-pink-750">Our Partners</span>
             </div>
             <div className=" flex w-1/3 flex-col">
-              <span>Sign up to get the latest news ande More ...</span>
+              <span>Signup & Get Special Offers</span>
               <div className="flex flex-row mt-3 gap-2 w-full">
                 <div
                   className="
