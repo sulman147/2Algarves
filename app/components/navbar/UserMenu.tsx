@@ -45,7 +45,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div 
-          onClick={onRent}
+          onClick={registerModal.onOpen}
           className="
             hidden
             md:block
@@ -62,7 +62,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             cursor-pointer
           "
         >
-          + Add Listing
+          Sign up
         </div>
         <div 
         onClick={toggleOpen}
@@ -142,10 +142,10 @@ const UserMenu: React.FC<UserMenuProps> = ({
                   label="Login" 
                   onClick={loginModal.onOpen}
                 />
-                <MenuItem 
+                {/* <MenuItem 
                   label="Sign up" 
                   onClick={registerModal.onOpen}
-                />
+                /> */}
               </>
             )}
           </div>

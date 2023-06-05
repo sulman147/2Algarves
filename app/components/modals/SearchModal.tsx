@@ -33,6 +33,8 @@ const SearchModal = () => {
   const [location, setLocation] = useState<CountrySelectValue>();
   const [guestCount, setGuestCount] = useState(1);
   const [roomCount, setRoomCount] = useState(1);
+  const [startDates, setStartDates] = useState<any>("DD/MM/YYYY");
+  const [endDates, setEndDates] = useState<any>("DD/MM/YYYY");
   const [bathroomCount, setBathroomCount] = useState(1);
   const [dateRange, setDateRange] = useState<Range>({
     startDate: new Date(),
@@ -51,6 +53,14 @@ const SearchModal = () => {
   const onNext = useCallback(() => {
     setStep((value) => value + 1);
   }, []);
+
+  const getDateINOUT = (date : any) =>{
+    let d = new Date(date);
+    let year = d.getFullYear()
+    let day = d.getDate()
+    let month = d.getMonth() + 1
+    return `${day}/${month}/${year}`
+  }
 
   const onSubmit = useCallback(async () => {
     if (step !== STEPS.INFO) {
@@ -137,12 +147,17 @@ const SearchModal = () => {
   if (step === STEPS.DATE) {
     bodyContent = (
       <div className="flex flex-col gap-8">
+        <div className="flex flex-row justify-center gap-8">
+        <span className="border-2 rounded-md border-black p-2">Check in : {`${startDates}`}</span> <span className="border-2 rounded-md border-black p-2">Check out : {`${endDates}`}</span></div>
         <Heading
           title="When do you plan to go?"
           subtitle="Make sure everyone is free!"
         />
         <Calendar
-          onChange={(value) => setDateRange(value.selection)}
+          onChange={(value) => {
+            setStartDates(getDateINOUT(value.selection.startDate));
+            setEndDates(getDateINOUT(value.selection.endDate));
+            setDateRange(value.selection)}}
           value={dateRange}
         />
       </div>
