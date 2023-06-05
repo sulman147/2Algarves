@@ -44,7 +44,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   return ( 
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div 
+      {currentUser ? null : <div 
           onClick={registerModal.onOpen}
           className="
             hidden
@@ -63,7 +63,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
           "
         >
           Sign up
-        </div>
+        </div> }
         <div 
         onClick={toggleOpen}
         className="
