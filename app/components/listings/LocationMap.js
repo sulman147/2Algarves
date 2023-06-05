@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import useCountries from "@/app/hooks/useCountries";
 
-const Map = dynamic(() => import("../Map"), {
+const MapTwo = dynamic(() => import("../Maptwo"), {
   ssr: false,
 });
 export default function LocationMap({ locationValue }) {
@@ -11,7 +11,7 @@ export default function LocationMap({ locationValue }) {
   const coordinates = getByLabel(locationValue)?.latlng;
   return (
     <div>
-      <Map center={coordinates} />
+      <MapTwo center={coordinates} />
     </div>
   );
 }

@@ -133,10 +133,8 @@ const Search = () => {
     </div>
     <div 
     onClick={searchModal.onOpen}
-    className="mt-2 button w-10 h-10 bg-pink-750 rounded-full cursor-pointer select-none
-    active:translate-y-1   hover:bg-orange-700
-    transition-all duration-150 [box-shadow:0_1px_0_0_#f87171,0_3px_0_0_#f87171]
-    border-[1px] border-pink-750"
+    className="mt-1 button w-14 h-14 bg-pink-750 rounded-full cursor-pointer 
+       hover:bg-orange-700"
   >
     <span className="flex flex-col justify-center items-center h-full text-white font-bold text-lg"><BiSearch size={18} /></span>
   </div>

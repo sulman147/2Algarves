@@ -33,8 +33,8 @@ const SearchModal = () => {
   const [location, setLocation] = useState<CountrySelectValue>();
   const [guestCount, setGuestCount] = useState(1);
   const [roomCount, setRoomCount] = useState(1);
-  const [startDates, setStartDates] = useState<any>("DD/MM/YYYY");
-  const [endDates, setEndDates] = useState<any>("DD/MM/YYYY");
+  const [startDates, setStartDates] = useState<any>("DD-MM-YYYY");
+  const [endDates, setEndDates] = useState<any>("DD-MM-YYYY");
   const [bathroomCount, setBathroomCount] = useState(1);
   const [dateRange, setDateRange] = useState<Range>({
     startDate: new Date(),
@@ -59,7 +59,7 @@ const SearchModal = () => {
     let year = d.getFullYear()
     let day = d.getDate()
     let month = d.getMonth() + 1
-    return `${day}/${month}/${year}`
+    return `${day}-${month}-${year}`
   }
 
   const onSubmit = useCallback(async () => {

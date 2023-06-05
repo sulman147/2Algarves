@@ -126,16 +126,16 @@ const ContactClient: React.FC = ({
 
           </div>
           <div className="mt-10 w-[75%]" >
-            <div className="flex flex-row justify-between">
-          <h2 className="text-2xl mt-2 font-bold">Directions</h2>
-          <div className=" w-[180px]">
+            {/* <div className="flex flex-row justify-between">
+          <h2 className="text-2xl mt-2 font-bold">Directions</h2> */}
+          {/* <div className=" w-[180px]">
               <Button
                 disabled={false}
                 label="Get Direction"
                 onClick={() => { }}
               />
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
           <LocationMap locationValue="Albufeira" />
         </div>
 
