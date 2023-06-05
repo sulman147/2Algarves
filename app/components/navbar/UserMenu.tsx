@@ -89,7 +89,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
         </div>
       </div>
       {isOpen && (
-        <div 
+        <div style={{'width': '150px'}}
           className="
             absolute 
             rounded-xl 
