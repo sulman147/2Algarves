@@ -13,7 +13,7 @@ const TermConditionClient: React.FC = ({
                     <h1 className=" items-center flex justify-center text-white font-bold md:text-2xl lg:text-4xl">Term And Conditions</h1>
                 </div>
             </div> */}
-            <h2 className="text-4xl font-bold text-center m3-5">Term And Conditions</h2>
+            <h2 className="text-4xl font-bold text-center mt-5">Term And Conditions</h2>
             <div className="p-5 px-24 flex justify-center items-center flex-col w-full" >
                 <div className="w-[75%] my-3 ">
                     <div className="border-2 text-black text-[1.3rem] shadow-lg bg-white rounded-lg p-6">
