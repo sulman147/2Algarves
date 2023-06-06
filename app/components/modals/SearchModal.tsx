@@ -146,9 +146,11 @@ const SearchModal = () => {
 
   if (step === STEPS.DATE) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-row justify-center gap-8">
-        <span className="border-2 rounded-md border-black p-2">Check in : {`${startDates}`}</span> <span className="border-2 rounded-md border-black p-2">Check out : {`${endDates}`}</span></div>
+      <div className="flex flex-col  gap-8">
+        <div className="flex flex-row rounded-lg bg-[#F1F1F1] p-[16px] justify-center gap-8">
+        <span className=" rounded-2xl bg-white shadow-lg p-2">Check in : {`${startDates}`}</span> 
+        <span className=" rounded-2xl bg-white shadow-lg p-2">Check out : {`${endDates}`}</span>
+        </div>
         <Heading
           title="When do you plan to go?"
           subtitle="Make sure everyone is free!"

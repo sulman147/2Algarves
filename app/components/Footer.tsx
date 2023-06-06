@@ -9,12 +9,12 @@ import Image from "next/image";
 function Footer() {
   return (
     <> <div className="flex flex-row px-10 mt-20 bg-white">
-    <div className=" flex  flex-col ml-40 p-5 ">
+    <div className=" flex w-1/3 flex-col ml-40 p-5 ">
     <Image
       src="/images/logo.png"
       width={200} height={100} alt={""} unoptimized={true}
     />
-    <p className="mt-2">LOJA H, 8200-362 Albufeira Albufeira</p>
+    <p className="mt-2">Travessa Sá Carneiro, Edifício Isermar, LOJA H, 8200-362 Albufeira Albufeira</p>
     <p className="mt-2 text-pink-750">+351 911 126 160</p>
     <p className="mt-2 text-pink-750">info@2algarve.com</p>
   </div>
