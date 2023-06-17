@@ -34,27 +34,29 @@ const Map = dynamic(() => import('../Map'), {
 });
 
 interface ListingInfoProps {
-  user: SafeUser,
+  user: string,
   description: string;
   guestCount: number;
-  roomCount: number;
-  bathroomCount: number;
+  adultCount: number;
+  petCount: number;
   category: {
     icon: IconType,
     label: string;
     description: string;
   } | undefined
   locationValue: string;
+  features:any;
 }
 
 const ListingInfo: React.FC<ListingInfoProps> = ({
   user,
   description,
   guestCount,
-  roomCount,
-  bathroomCount,
+  adultCount,
+  petCount,
   category,
   locationValue,
+  features
 }) => {
   const { getByValue } = useCountries();
   
@@ -73,8 +75,8 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
             gap-2
           "
         >
-          <div>Hosted by {user?.name}</div>
-          <Avatar src={user?.image} />
+          <div>Hosted by Algarve</div>
+          {/* <Avatar src={"user?.image"} /> */}
         </div>
         <div className="
             flex 
@@ -89,10 +91,10 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
             {guestCount} guests
           </div>
           <div>
-            {roomCount} rooms
+            {adultCount} adults
           </div>
           <div>
-            {bathroomCount} bathrooms
+            {petCount} pets
           </div>
         </div>
       </div>
@@ -121,19 +123,12 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
       <div className="
       text-base font-normal text-black p-4">
         <ReadMore>
-        This is without doubt THE BEST LOCATION you could ever ask for when visiting Sydney.
-        2 minute walk to everything that is wonderful and local in the inner-city village of Surry Hills, and a short walk further to Sydney CBD, Hyde Park or Centennial Park. Across the road from the iconic Sydney Cricket Ground and other sporting venues, 15 minutes to Sydney beautiful eastern suburbs beaches including the world famous Bondi Beach.
-        Start your day with a coffee at the amazing Bourke Street Bakery right around the corner.
-        Our house is a very stylish, architecturally designed & recently renovated terrace house. A perfect combination of the old & the new, and incredibly relaxed environment.
-        Your room is a large room with its own private balcony looking out over the neighbourhood & comfortable queen size bed. Plenty of hanging and drawer space for your clothes so no need to live out of a suitcase.
-        This is also the home of Gascoigne & King - all guests will receive one of our beautifully handmade luxury scented travel candles (retail $25) for free when they check in!!
-        There is nothing like a home away from home so feel free to settle in. Our home is yours during your stay and nothing is too much trouble. 24/7 access, broadband, cable TV, kitchen, espresso machine, washer/dryer, BBQ & courtyard are all yours to use at anytime. Community bikes are available to ride around town too - great way to get out & about.
-        
+        {description}
         </ReadMore>
       </div>
       </div>
       <Map center={coordinates} />
-      <Ammenities/>
+      <Ammenities listingfeatures={features}/>
       
     </div>
    );

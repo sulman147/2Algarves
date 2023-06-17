@@ -54,7 +54,6 @@ const ReservationCard: React.FC<ListingCardProps> = ({
     }
 
     reviewModel.onOpen();
-    console.log("Adding Listing")
   }, [loginModal, reviewModel, currentUser]);
 
   const price = useMemo(() => {

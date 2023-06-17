@@ -35,7 +35,6 @@ const ReviewModel = () => {
   const onSubmit: SubmitHandler<FieldValues> = 
   (data) => {
     setIsLoading(true);
-    console.log("data",data)
     toast.success('Review Submited Successfully');
         router.refresh();
         reviewModel.onClose();

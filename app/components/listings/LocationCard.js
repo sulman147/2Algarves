@@ -4,8 +4,8 @@ import useCountries from "@/app/hooks/useCountries";
 import { CiLocationOn } from "react-icons/ci";
 
 export default function LocationCard({ locationValue }) {
-  const { getByValue } = useCountries();
-  const location = getByValue(locationValue);
+  const { getByLabel } = useCountries();
+  const location = getByLabel(locationValue);
   return (
     <div className="flex flex-col bg-white rounded-xl mt-3">
       <div className="flex flex-row items-center my-2 ml-6 gap-4 ">

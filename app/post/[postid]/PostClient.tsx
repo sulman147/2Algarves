@@ -2,6 +2,8 @@
 
 import Container from "@/app/components/Container";
 import Image from "next/image";
+import axios from "axios";
+import React,{ useEffect, useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import Button from "@/app/components/Button";
 import {  FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -9,11 +11,34 @@ import Heading from "@/app/components/Heading";
 import Inputtwo from "@/app/components/inputs/Inputtwo";
 
 interface Props {
-  postId: number;
+  postId: any;
 }
 
 const PostClient: React.FC<Props> = ({ postId
 }) => {
+  const id = Number(postId.postid)
+  const [postData, setPostData] = useState<any>([]);
+
+    const Api = "http://server.cashbackforever.net:5500/api/";
+    const getPostsData = async () => {
+      console.error("this is data2222222");
+      try {
+        const response = await axios.get(`${Api}blogs/${id}`);
+  
+        // Process the response data
+        const data = response.data;
+        console.error("this is data",data);
+        setPostData(data);
+      } catch (error) {
+        // Handle any errors
+        console.error(error);
+      }
+    };
+  
+    useEffect(() => {
+      console.error("this is data3333333");
+        getPostsData();
+    }, []);
   const {
     register,
     handleSubmit,
@@ -25,14 +50,19 @@ const PostClient: React.FC<Props> = ({ postId
       review: ''
     },
   });
-
+  function createMarkup() {
+    return { __html: `${postData?.description}` };
+  }
+  let date = new Date(postData.created_at);
+  const formattedDate = date.toLocaleString("en-US",{ year: "numeric", month: "short", day: "numeric" });
+  
   return (
 
     <Container>
       <div className="  mt-5 gap-5 flex flex-row w-full">
         <div className="flex flex-col  w-[70%]">
           <Heading
-            title="️The Unexpected Benefits that Couchsurfing Brings"
+            title={postData.title}
           />
          <div className="
           w-full
@@ -47,7 +77,7 @@ const PostClient: React.FC<Props> = ({ postId
          <iframe
       width="1053"
       height="480"
-      src={`https://www.youtube.com/embed/d1DhBZVL5Pg`}
+      src={postData.video_link}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
@@ -56,28 +86,12 @@ const PostClient: React.FC<Props> = ({ postId
         
       </div>
           <div className="mt-8" >
-            <span className="font-normal bg-[#cb1670] text-white px-2 py-2 rounded-md text-sm">25 May, 2023</span>
+            <span className="font-normal bg-[#cb1670] text-white px-2 py-2 rounded-md text-sm">{formattedDate}</span>
           </div>
-          <div className="mt-3 text-lg w-[99%] font-light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta accusamus est nostrum &
-            odit voluptate tempora&#44; officia at corrupti sit nihil molestiae ratione doloremque
-            similique quia&#44; ipsa culpa vitae sunt.
-            orem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta accusamus est nostrum &
-            odit voluptate tempora&#44; officia at corrupti sit nihil molestiae ratione doloremque
-            similique quia&#44; ipsa culpa vitae sunt.
-            orem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta accusamus est nostrum &
-            odit voluptate tempora&#44; officia at corrupti sit nihil molestiae ratione doloremque
-            similique quia&#44; ipsa culpa vitae sunt.<br />
-            orem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta accusamus est nostrum &
-            odit voluptate tempora&#44; officia at corrupti sit nihil molestiae ratione doloremque
-            similique quia&#44; ipsa culpa vitae sunt.
-            orem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta accusamus est nostrum &
-            odit voluptate tempora&#44; officia at corrupti sit nihil molestiae ratione doloremque
-            similique quia&#44; ipsa culpa vitae sunt.
-            orem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta accusamus est nostrum &
-            odit voluptate tempora&#44; officia at corrupti sit nihil molestiae ratione doloremque
-            similique quia&#44; ipsa culpa vitae sunt.
-          </div>
+          <div
+              className="mt-3 text-lg w-[99%] font-light"
+              dangerouslySetInnerHTML={createMarkup()}
+            />
         </div>
         <div className="bg-white mt-10 h-full rounded-xl align-middle p-5 gap-5 flex flex-col w-[30%]">
           <Inputtwo

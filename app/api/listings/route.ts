@@ -30,7 +30,6 @@ export async function POST(
       NextResponse.error();
     }
   });
-  console.log("Body",body)
 
   const listing = await prisma.listing.create({
     data: {

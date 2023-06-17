@@ -5,12 +5,14 @@ import Link from "next/link";
 
 interface Props {
   id: number;
-  imageSrc: string;
+  image: string;
   title: string;
-  date: string;
+  created_at: string;
 }
 
-const BlogPost: React.FC<Props> = ({ id, date, imageSrc, title }) => {
+const BlogPost: React.FC<Props> = ({ id, created_at, image, title }) => {
+  let date = new Date(created_at);
+  const formattedDate = date.toLocaleString("en-US",{ year: "numeric", month: "short", day: "numeric" });
   return (
     <div
       className="col-span-1   bg-white rounded-xl shadow-md cursor-pointer group"
@@ -27,14 +29,14 @@ const BlogPost: React.FC<Props> = ({ id, date, imageSrc, title }) => {
         >
           <Link href={"/post/"+id}>
           <Image
-            src={imageSrc}
+            src={image}
             width={300} height={200} alt={""} unoptimized={true}
             className="w-full  mb-2 -mt-10 "
           />
           </Link>
         </div>
         <div className="font-normal text-[#cb1670] px-2 text-sm">
-        {date}
+        {formattedDate}
         </div>
         <h2 className=" text-xl mb-2 px-2 font-bold line-clamp-2 " >{title}</h2>
       </div>

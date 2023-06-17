@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PhotoAlbum from "react-photo-album";
 
@@ -15,27 +15,48 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { BiCategoryAlt } from "react-icons/bi";
 import { GrGallery } from "react-icons/gr";
 
-const photos = [
-  { src: "/images/1.jpg", width: 800, height: 600 },
-  { src: "/images/2.jpg", width: 1600, height: 900 },
-  { src: "/images/3.jpg", width: 800, height: 600 },
-  { src: "/images/4.jpg", width: 1600, height: 900 },
-  { src: "/images/5.jpg", width: 800, height: 600 },
-  { src: "/images/6.jpg", width: 1600, height: 900 },
-  { src: "/images/7.jpg", width: 800, height: 600 },
-  { src: "/images/8.jpg", width: 1600, height: 900 },
-  { src: "/images/9.jpg", width: 1600, height: 900 },
-];
-const photos2 = [
-  { src: "/images/1.jpg", width: 800, height: 600 },
-  { src: "/images/2.jpg", width: 800, height: 600 },
-  { src: "/images/3.jpg", width: 800, height: 600 },
-  { src: "/images/4.jpg", width: 800, height: 600 },
-  { src: "/images/5.jpg", width: 800, height: 600 },
-  { src: "/images/6.jpg", width: 800, height: 600 },
-];
+let photos = [];
+let photos2 = [];
 
-const Gallery = ({}) => {
+const Gallery = ({ Gallery }) => {
+  useEffect(() => {
+    if (Gallery.length > 6) {
+      let newphotos = Gallery.slice(0, 6);
+      let newphotos2 = Gallery;
+      for (let i = 0; i < newphotos.length; i++) {
+        photos.push({
+          src: `${newphotos[i].image}`,
+          width: 800,
+          height: 600,
+        });
+      }
+      for (let i = 0; i < newphotos2.length; i++) {
+        photos2.push({
+          src: `${newphotos2[i].image}`,
+          width: 800,
+          height: 600,
+        });
+      }
+    } else {
+      let newphotos = Gallery;
+      let newphotos2 = Gallery;
+      for (let i = 0; i < newphotos.length; i++) {
+        photos.push({
+          src: `${newphotos[i].image}`,
+          width: 800,
+          height: 600,
+        });
+      }
+      for (let i = 0; i < newphotos2.length; i++) {
+        photos2.push({
+          src: `${newphotos2[i].image}`,
+          width: 800,
+          height: 600,
+        });
+      }
+    }
+  }, []);
+
   const [index, setIndex] = useState(-1);
   return (
     <div className="flex flex-col bg-white rounded-xl mt-3">
@@ -57,7 +78,7 @@ const Gallery = ({}) => {
       <div className="p-2">
         <PhotoAlbum
           layout="columns"
-          photos={photos2}
+          photos={photos}
           targetRowHeight={150}
           onClick={({ index }) => setIndex(index)}
         />
@@ -88,7 +109,7 @@ const Gallery = ({}) => {
       </div>
       {/* <button onClick={() => setIndex(1)}> </button> */}
       <Lightbox
-        slides={photos}
+        slides={photos2}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}

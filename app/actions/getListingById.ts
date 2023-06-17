@@ -1,4 +1,5 @@
 import prisma from "@/app/libs/prismadb";
+import axios from "axios";
 
 interface IParams {
   listingId?: string;
@@ -9,30 +10,20 @@ export default async function getListingById(
 ) {
   try {
     const { listingId } = params;
+    
+    const Api = "http://server.cashbackforever.net:5500/api/";
+    const response = await axios.get(`${Api}listings/${listingId}`);
+    
+    const listing = response.data
 
-    const listing = await prisma.listing.findUnique({
-      where: {
-        id: listingId,
-      },
-      include: {
-        user: true
-      }
-    });
 
     if (!listing) {
       return null;
     }
 
     return {
-      ...listing,
-      createdAt: listing.createdAt.toString(),
-      user: {
-        ...listing.user,
-        createdAt: listing.user.createdAt.toString(),
-        updatedAt: listing.user.updatedAt.toString(),
-        emailVerified: 
-          listing.user.emailVerified?.toString() || null,
-      }
+      listing,
+     
     };
   } catch (error: any) {
     throw new Error(error);

@@ -1,4 +1,5 @@
 import prisma from "@/app/libs/prismadb";
+import axios from "axios";
 
 export interface IListingsParams {
   userId?: string;
@@ -76,23 +77,19 @@ export default async function getListings(
         }
       }
     }
+    const Api = "http://server.cashbackforever.net:5500/api/";
+    const response = await axios.get(`${Api}listings`);
     
 
-    const listings = await prisma.listing.findMany({
-      where: query,
-      orderBy: {
-        createdAt: 'desc'
-      }
-    });
+    const listings = response.data
 
-    const safeListings = listings.map((listing?:any) => ({
-      ...listing,
-      createdAt: listing.createdAt.toISOString(),
-    }));
+    // const safeListings = listings.map((listing?:any) => ({
+    //   ...listing,
+    //   createdAt: listing.createdAt.toISOString(),
+    // }));
 
-    return safeListings;
+    return listings;
   } catch (error: any) {
-    console.log("error//////////////",error);
     throw new Error(error);
   }
 }

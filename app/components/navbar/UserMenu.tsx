@@ -38,7 +38,6 @@ const UserMenu: React.FC<UserMenuProps> = ({
     }
 
     rentModal.onOpen();
-    console.log("Adding Listing")
   }, [loginModal, rentModal, currentUser]);
 
   return ( 

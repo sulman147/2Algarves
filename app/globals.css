@@ -28,10 +28,10 @@ body,
   overflow: visible !important;
 }
 .carousel.carousel-slider .control-arrow {
-  height: 56%;
+  height: 46%;
 }
 .carousel .control-dots {
-  margin-bottom: 78% !important;
+  margin-bottom: 90% !important;
 }
 
 .video-responsive {

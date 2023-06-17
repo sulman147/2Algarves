@@ -28,93 +28,116 @@ const initialDateRange = {
 };
 
 interface ListingClientProps {
-  reservations?: SafeReservation[];
-  listing: SafeListing & {
-    user: SafeUser;
-  };
-  currentUser?: SafeUser | null;
+  // reservations?: SafeReservation[];
+  listing:any;
+  // currentUser?: SafeUser | null;
 }
 
 const ListingClient: React.FC<ListingClientProps> = ({
   listing,
-  reservations = [],
-  currentUser
+  // reservations = [],
+  // currentUser
 }) => {
-  const loginModal = useLoginModal();
-  const router = useRouter();
+  const [Categories, setCategories] = useState<any>([]);
 
-  const disabledDates = useMemo(() => {
-    let dates: Date[] = [];
 
-    reservations.forEach((reservation: any) => {
-      const range = eachDayOfInterval({
-        start: new Date(reservation.startDate),
-        end: new Date(reservation.endDate)
-      });
+  const Api = "http://server.cashbackforever.net:5500/api/";
+  const getCategories = async () => {
+    try {
+      const response = await axios.get(`${Api}category`);
 
-      dates = [...dates, ...range];
-    });
+      // Process the response data
+      const data = response.data;
+      setCategories(data);
+    } catch (error) {
+      // Handle any errors
+      console.error(error);
+    }
+  };
 
-    return dates;
-  }, [reservations]);
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  const findCategoryById = (id:any) => {
+    const foundItem = Categories.find((item:any) => item.id === id);
+    return foundItem ? foundItem.name : null;
+  };
+  let categoryname = findCategoryById(listing.listing.category_id)
+  // const loginModal = useLoginModal();
+  // const router = useRouter();
+
+  // const disabledDates = useMemo(() => {
+  //   let dates: Date[] = [];
+
+  //   reservations.forEach((reservation: any) => {
+  //     const range = eachDayOfInterval({
+  //       start: new Date(reservation.startDate),
+  //       end: new Date(reservation.endDate)
+  //     });
+
+  //     dates = [...dates, ...range];
+  //   });
+
+  //   return dates;
+  // }, [reservations]);
 
   const category = useMemo(() => {
      return categories.find((items) => 
-      items.label === listing.category);
-  }, [listing.category]);
+      items.label === categoryname);
+  }, [categoryname]);
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [totalPrice, setTotalPrice] = useState(listing.price);
-  const [dateRange, setDateRange] = useState<Range>(initialDateRange);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [totalPrice, setTotalPrice] = useState(listing.price);
+  // const [dateRange, setDateRange] = useState<Range>(initialDateRange);
 
-  const onCreateReservation = useCallback(() => {
-      if (!currentUser) {
-        return loginModal.onOpen();
-      }
-      setIsLoading(true);
+  // const onCreateReservation = useCallback(() => {
+  //     if (!currentUser) {
+  //       return loginModal.onOpen();
+  //     }
+  //     setIsLoading(true);
 
-      axios.post('/api/reservations', {
-        totalPrice,
-        startDate: dateRange.startDate,
-        endDate: dateRange.endDate,
-        listingId: listing?.id
-      })
-      .then(() => {
-        toast.success('Listing reserved!');
-        setDateRange(initialDateRange);
-        router.push('/trips');
-      })
-      .catch(() => {
-        toast.error('Something went wrong.');
-      })
-      .finally(() => {
-        setIsLoading(false);
-      })
-  },
-  [
-    totalPrice, 
-    dateRange, 
-    listing?.id,
-    router,
-    currentUser,
-    loginModal
-  ]);
+  //     axios.post('/api/reservations', {
+  //       totalPrice,
+  //       startDate: dateRange.startDate,
+  //       endDate: dateRange.endDate,
+  //       listingId: listing?.id
+  //     })
+  //     .then(() => {
+  //       toast.success('Listing reserved!');
+  //       setDateRange(initialDateRange);
+  //       router.push('/trips');
+  //     })
+  //     .catch(() => {
+  //       toast.error('Something went wrong.');
+  //     })
+  //     .finally(() => {
+  //       setIsLoading(false);
+  //     })
+  // },
+  // [
+  //   totalPrice, 
+  //   dateRange, 
+  //   listing?.id,
+  //   router,
+  //   currentUser,
+  //   loginModal
+  // ]);
 
-  useEffect(() => {
-    if (dateRange.startDate && dateRange.endDate) {
-      const dayCount = differenceInDays(
-        dateRange.endDate, 
-        dateRange.startDate
-      );
+  // useEffect(() => {
+  //   if (dateRange.startDate && dateRange.endDate) {
+  //     const dayCount = differenceInDays(
+  //       dateRange.endDate, 
+  //       dateRange.startDate
+  //     );
       
-      if (dayCount && listing.price) {
-        setTotalPrice(dayCount * listing.price);
-      } else {
-        setTotalPrice(listing.price);
-      }
-    }
-  }, [dateRange, listing.price]);
-
+  //     if (dayCount && listing.price) {
+  //       setTotalPrice(dayCount * listing.price);
+  //     } else {
+  //       setTotalPrice(listing.price);
+  //     }
+  //   }
+  // }, [dateRange, listing.price]);
   return ( 
     <Container>
       <div 
@@ -123,13 +146,14 @@ const ListingClient: React.FC<ListingClientProps> = ({
           mx-auto
         "
       > 
+      
         <div className="flex flex-col ">
           <ListingHead
-            title={listing.title}
-            imageSrc={listing.imageSrc}
-            locationValue={listing.locationValue}
-            id={listing.id}
-            currentUser={currentUser}
+            title={listing.listing.title}
+            videoSrc={listing.listing.video_link}
+            locationValue={listing.listing.city}
+            id={listing.listing.id}
+            // currentUser={currentUser}
           />
           <div 
             className="
@@ -140,13 +164,14 @@ const ListingClient: React.FC<ListingClientProps> = ({
             "
           >
             <ListingInfo
-              user={listing.user}
+              user={"Algarve"}
               category={category}
-              description={listing.description}
-              roomCount={listing.roomCount}
-              guestCount={listing.guestCount}
-              bathroomCount={listing.bathroomCount}
-              locationValue={listing.locationValue}
+              description={listing.listing.description}
+              adultCount={listing.listing.no_of_adults}
+              petCount={listing.listing.no_of_pets}
+              guestCount={listing.listing.no_of_guests}
+              locationValue={listing.listing.city}
+              features= {listing.listing.features}
             />
             <div 
               className="
@@ -157,9 +182,9 @@ const ListingClient: React.FC<ListingClientProps> = ({
                 md:col-span-3
               "
             >
-              <LocationCard locationValue={listing.locationValue}/>
+              <LocationCard locationValue={listing.listing.city}/>
               <ContactInfo price = {listing.price}/>
-              <Gallery/>
+              <Gallery Gallery = {listing.listing.gallery}/>
               
             </div>
           </div>

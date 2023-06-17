@@ -13,7 +13,7 @@ import { RiShareForwardLine } from "react-icons/ri";
 interface ListingHeadProps {
   title: string;
   locationValue: string;
-  imageSrc: string;
+  videoSrc: string;
   id: string;
   currentUser?: SafeUser | null
 }
@@ -21,19 +21,19 @@ interface ListingHeadProps {
 const ListingHead: React.FC<ListingHeadProps> = ({
   title,
   locationValue,
-  imageSrc,
+  videoSrc,
   id,
   currentUser
 }) => {
-  const { getByValue } = useCountries();
+  const { getByLabel } = useCountries();
 
-  const location = getByValue(locationValue);
+  const location = getByLabel(locationValue);
 
   return ( 
     <><div className="flex flex-row justify-between align-middle">
       <div>
       <Heading
-        title="️Nusa Penida by Private Boat - Snorkeling 4 spots"
+        title={title}
       />
       <div className="flex flex-row">
         <Rating name="read-only" value={5} readOnly />
@@ -48,11 +48,11 @@ const ListingHead: React.FC<ListingHeadProps> = ({
             currentUser={currentUser}
           />
         </div>
-        <div className=" border-2 rounded-3xl flex flex-row mt-1 justify-center items-center pl-2 pr-2"> Share &ensp;
+        {/* <div className=" border-2 rounded-3xl flex flex-row mt-1 justify-center items-center pl-2 pr-2"> Share &ensp;
         <RiShareForwardLine
         size={24}
       />
-        </div>
+        </div> */}
       </div>
       </div>
       <div className="
@@ -68,7 +68,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
          <iframe
       width="1053"
       height="480"
-      src={`https://www.youtube.com/embed/d1DhBZVL5Pg`}
+      src={`${videoSrc}`}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen

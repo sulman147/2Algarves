@@ -136,7 +136,6 @@ const SearchModal = () => {
       <CountrySelect 
         value={location} 
         onChange={(value) =>{ 
-          console.log(value)
           setLocation(value as CountrySelectValue)}} 
       />
       <hr />

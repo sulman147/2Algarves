@@ -10,6 +10,7 @@ import getListings, {
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
 import Footer from "./components/Footer";
+import axios from "axios";
 
 interface HomeProps {
   searchParams: IListingsParams
@@ -18,7 +19,6 @@ interface HomeProps {
 const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
-  console.log(">>>>>>>>>>>>>",searchParams)
   if (listings.length === 0) {
     return (
       <ClientOnly>
@@ -43,7 +43,7 @@ const Home = async ({ searchParams }: HomeProps) => {
             gap-8
           "
         >
-          {listings.map((listing) => (
+          {listings.map((listing:any) => (
             <ListingCard
               currentUser={currentUser}
               key={listing.id}
@@ -59,3 +59,5 @@ const Home = async ({ searchParams }: HomeProps) => {
 }
 
 export default Home;
+
+

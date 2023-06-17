@@ -11,8 +11,6 @@ const formattedCountries = countries.map((country) => ({
   latlng: country.latlng,
   region: country.country,
 }));
-console.log("this is my formated countries",countries)
-console.log("this is my formated countries",formattedCountries)
 
 const useCountries = () => {
   const getAll = () => formattedCountries;
