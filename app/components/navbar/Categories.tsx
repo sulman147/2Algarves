@@ -114,8 +114,9 @@ const Categories = () => {
     <Container>
       <div
         className="
-          pt-4
-          flex 
+          py-2
+          flex
+          gap-4 
           flex-row 
           items-center 
           justify-center

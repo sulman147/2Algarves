@@ -151,7 +151,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
           <ListingHead
             title={listing.listing.title}
             videoSrc={listing.listing.video_link}
-            locationValue={listing.listing.city}
+            locationValue={listing.listing.location}
             id={listing.listing.id}
             // currentUser={currentUser}
           />
@@ -170,7 +170,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
               adultCount={listing.listing.no_of_adults}
               petCount={listing.listing.no_of_pets}
               guestCount={listing.listing.no_of_guests}
-              locationValue={listing.listing.city}
+              locationValue={listing.listing.location}
               features= {listing.listing.features}
             />
             <div 
@@ -182,8 +182,8 @@ const ListingClient: React.FC<ListingClientProps> = ({
                 md:col-span-3
               "
             >
-              <LocationCard locationValue={listing.listing.city}/>
-              <ContactInfo price = {listing.price}/>
+              <LocationCard locationValue={listing.listing.location}/>
+              <ContactInfo price = {listing.listing.rent}/>
               <Gallery Gallery = {listing.listing.gallery}/>
               
             </div>

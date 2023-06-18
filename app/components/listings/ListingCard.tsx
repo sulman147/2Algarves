@@ -147,7 +147,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           <div>
             <img className="relative mx-auto h-[50px] w-[50px]  mt-[-32px] z-100 rounded-full sm:mx-0 sm:shrink-0" src="/images/Algarve.jpg" alt="brand" />
             <div className="font-semibold text-lg">
-            {data.country}, {data.city}
+            {data.country}, {data.location}
             </div>
             <div className="font-light text-neutral-500">
               {findCategoryById(data.category_id)}
