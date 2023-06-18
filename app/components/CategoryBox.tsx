@@ -57,6 +57,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         hover:text-neutral-800
         transition
         cursor-pointer
+        shadow-lg
         bg-pink-750 
         hover:bg-orange-700 
         rounded-full

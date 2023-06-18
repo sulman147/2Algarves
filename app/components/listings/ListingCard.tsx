@@ -132,7 +132,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           </Carousel>
 
 
-          <div className="
+          {/* <div className="
               absolute
               top-4
               right-7
@@ -141,7 +141,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
               listingId={data.id}
               currentUser={currentUser}
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-row place-content-between px-4 pb-2 gap-2 w-full " >
           <div>

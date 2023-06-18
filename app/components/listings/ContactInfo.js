@@ -3,7 +3,20 @@
 import { MdContactPhone } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
 import { BsCheck2Circle } from "react-icons/bs";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import React, { useState } from "react";
 const ContactInfo = ({ price }) => {
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+
+  const handleCheckInDateChange = (date) => {
+    setCheckInDate(date);
+  };
+
+  const handleCheckOutDateChange = (date) => {
+    setCheckOutDate(date);
+  };
   return (
     <div className="flex flex-col bg-white rounded-xl mt-3">
       <div className="flex flex-row items-center my-2 ml-6 gap-4 ">
@@ -48,14 +61,26 @@ const ContactInfo = ({ price }) => {
           &ensp;Your dates are available
         </div>
         <div className="border-2 mt-2 rounded-md flex flex-col">
+          {/* <CheckInOut /> */}
           <div className="border-b-2 w-full flex flex-row">
             <div className="border-r-2 w-1/2 p-2 flex flex-col">
               <span>Check In</span>
-              <span className="text-pink-750">Aug 1</span>
+              <DatePicker
+                selected={checkInDate}
+                onChange={handleCheckInDateChange}
+                dateFormat="dd/MM/yyyy"
+                placeholderText="Select check-in date"
+              />
+              {/* <span className="text-pink-750">Aug 1</span> */}
             </div>
             <div className="flex w-1/2 p-2 flex-col">
               <span>Check Out</span>
-              <span className="text-pink-750">Aug 25</span>
+              <DatePicker
+                selected={checkInDate}
+                onChange={handleCheckInDateChange}
+                dateFormat="dd/MM/yyyy"
+                placeholderText="Select check-out date"
+              />
             </div>
           </div>
           <div className="flex p-2 flex-col">
