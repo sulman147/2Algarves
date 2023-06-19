@@ -77,7 +77,7 @@ const ContactInfo = ({ price }) => {
               <span>Check Out</span>
               <DatePicker
                 selected={checkInDate}
-                onChange={handleCheckInDateChange}
+                onChange={handleCheckOutDateChange}
                 dateFormat="dd/MM/yyyy"
                 placeholderText="Select check-out date"
               />

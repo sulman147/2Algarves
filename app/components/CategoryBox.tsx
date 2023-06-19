@@ -58,11 +58,12 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         transition
         cursor-pointer
         shadow-lg
-        bg-pink-750 
+        ${selected ? 'bg-pink-750' : 'bg-[#F1F1F1]'}
+         hover:'text-white'
         hover:bg-orange-700 
         rounded-full
         ${selected ? 'border-b-neutral-800' : 'border-transparent'}
-        ${selected ? 'text-white' : 'text-white'}
+        ${selected ? 'text-white' : 'text-black'}
       `}
     >
       <div className="font-medium text-sm">

@@ -114,7 +114,7 @@ const Categories = () => {
     <Container>
       <div
         className="
-          py-2
+          py-3
           flex
           gap-4 
           flex-row 
